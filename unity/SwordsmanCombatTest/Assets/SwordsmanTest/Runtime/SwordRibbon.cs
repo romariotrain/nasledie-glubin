@@ -12,8 +12,10 @@ namespace SwordsmanTest
         public Transform bladeBase, bladeTip;
         public Material material;
         [Tooltip("Catmull-Rom steps between two frame samples")] public int smoothing = 4;
-        // Measured in-game on v010: strikes reach 6-9 m/s at the tip, wind-ups and returns to guard stay under ~4.
-        [Tooltip("Tip speed (m/s) above which an attack draws the arc")] public float sweepSpeed = 4.5f;
+        // Measured at the true tip in-game on v010: strikes 28-61 m/s, returns to guard under ~8.
+        [Tooltip("Tip speed (m/s) above which an attack draws the arc")] public float sweepSpeed = 10f;
+        [Tooltip("Arc may start this long before the hit window")] public float strikeLead = .02f;
+        [Tooltip("Arc may continue this long after the hit window")] public float strikeTail = .08f;
         [Tooltip("Pulls the arc towards a horizontal plane at chest height so it reads from the top camera")]
         [Range(0, 1)] public float flatten = .3f;
 
@@ -23,11 +25,11 @@ namespace SwordsmanTest
         {
             switch (state)
             {
-                case "attack_1": return new Profile { lifetime = .26f, reach = .55f, glow = .35f, inner = .15f, intensity = 1f };
-                case "attack_2": return new Profile { lifetime = .3f, reach = .7f, glow = .45f, inner = .1f, intensity = 1.15f };
-                case "attack_3": return new Profile { lifetime = .4f, reach = 1.05f, glow = .7f, inner = .05f, intensity = 1.45f };
-                case "piercing_lunge": return new Profile { lifetime = .3f, reach = .8f, glow = .4f, inner = .2f, intensity = 1.2f };
-                default: return new Profile { lifetime = .26f, reach = .55f, glow = .35f, inner = .15f, intensity = 1f };
+                case "attack_1": return new Profile { lifetime = .26f, reach = .22f, glow = .22f, inner = .2f, intensity = 1f };
+                case "attack_2": return new Profile { lifetime = .3f, reach = .32f, glow = .28f, inner = .15f, intensity = 1.15f };
+                case "attack_3": return new Profile { lifetime = .4f, reach = .5f, glow = .42f, inner = .1f, intensity = 1.45f };
+                case "piercing_lunge": return new Profile { lifetime = .3f, reach = .35f, glow = .25f, inner = .25f, intensity = 1.2f };
+                default: return new Profile { lifetime = .26f, reach = .22f, glow = .22f, inner = .2f, intensity = 1f };
             }
         }
 
@@ -40,6 +42,28 @@ namespace SwordsmanTest
         static readonly float[] railV = { 0, .78f, 1 };
         GameObject surface; Mesh mesh; CombatPlayer player; SlashFeedback feedback;
         Vector3 lastTip; bool hasLastTip;
+        Transform sword; Vector3 tipLocal, hiltLocal; bool resolved;
+
+        public Vector3 TipPoint { get { Resolve(); return sword ? sword.TransformPoint(tipLocal) : bladeTip.position; } }
+        public Vector3 HiltPoint { get { Resolve(); return sword ? sword.TransformPoint(hiltLocal) : bladeBase.position; } }
+
+        // The scene builder placed the markers by bounds.max along the blade axis, which on v010 is the
+        // pommel. Pick the end of the sword mesh farther from the hand socket as the point instead.
+        void Resolve()
+        {
+            if (resolved) return; resolved = true;
+            sword = bladeTip ? bladeTip.parent : null;
+            var filter = sword ? sword.GetComponent<MeshFilter>() : null;
+            if (!filter || !filter.sharedMesh || !sword.parent) { sword = null; return; }
+            var bounds = filter.sharedMesh.bounds; int axis = 0;
+            for (int i = 1; i < 3; i++) if (bounds.size[i] > bounds.size[axis]) axis = i;
+            Vector3 high = bounds.center, low = bounds.center; high[axis] = bounds.max[axis]; low[axis] = bounds.min[axis];
+            Vector3 hand = sword.InverseTransformPoint(sword.parent.position);
+            bool highIsTip = (high - hand).sqrMagnitude > (low - hand).sqrMagnitude;
+            tipLocal = highIsTip ? high : low;
+            Vector3 pommel = highIsTip ? low : high;
+            hiltLocal = Vector3.Lerp(pommel, tipLocal, .22f); // just above the guard
+        }
 
         public void Tick(float dt, bool emit, Color colour)
         {
@@ -64,12 +88,17 @@ namespace SwordsmanTest
             {
                 // The hit window leads the visible swing in several clips, so draw while the blade
                 // actually travels fast during an attack rather than only inside the hit window.
-                Vector3 hilt = bladeBase.position, tip = bladeTip.position;
+                Vector3 hilt = HiltPoint, tip = TipPoint;
                 float jump = hasLastTip ? Vector3.Distance(tip, lastTip) : 0, speed = jump / dt;
                 lastTip = tip; hasLastTip = true;
                 if (jump > 1.2f) { samples.Clear(); speed = 0; } // teleport or arena reset, not a swing
                 string state = player ? player.State : "";
-                bool swinging = player ? state.StartsWith("attack_") || state == "piercing_lunge" : emit;                if (swinging && speed > sweepSpeed)
+                bool swinging = player ? state.StartsWith("attack_") || state == "piercing_lunge" : emit;
+                // v010 wind-ups snap as fast as the strikes, so also require the strike window.
+                var move = player ? player.CurrentMove : null;
+                if (move != null && move.activeEnd > move.activeStart)
+                    swinging &= player.ActionTime >= move.activeStart - strikeLead && player.ActionTime <= move.activeEnd + strikeTail;
+                if (swinging && speed > sweepSpeed)
                 {
                     var p = ProfileFor(state);
                     float chest = (player ? player.transform.position.y : hilt.y) + 1f;

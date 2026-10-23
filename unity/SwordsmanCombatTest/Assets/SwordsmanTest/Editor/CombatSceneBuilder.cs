@@ -128,12 +128,16 @@ namespace SwordsmanTest.Editor
             trailObject.transform.SetParent(sword,false);
             var mesh=sword.GetComponent<MeshFilter>().sharedMesh;
             var bounds=mesh.bounds; int axis=bounds.size.x>bounds.size.y ? 0 : 1; if(bounds.size.z>bounds.size[axis]) axis=2;
-            Vector3 tip=bounds.center; tip[axis]=bounds.max[axis]; trailObject.transform.localPosition=tip;
+            // The blade tip is the end farther from the hand socket; on v010 bounds.max is the pommel.
+            Vector3 tip=bounds.center, butt=bounds.center; tip[axis]=bounds.max[axis]; butt[axis]=bounds.min[axis];
+            Vector3 hand=sword.InverseTransformPoint(sword.parent.position);
+            if((butt-hand).sqrMagnitude>(tip-hand).sqrMagnitude){var swap=tip;tip=butt;butt=swap;}
+            trailObject.transform.localPosition=tip;
             var trail=trailObject.AddComponent<TrailRenderer>(); trail.time=.07f; trail.startWidth=.04f; trail.endWidth=0;
             trail.minVertexDistance=.025f; trail.emitting=false; trail.shadowCastingMode=ShadowCastingMode.Off;
             trail.material=UnlitMaterial("Trail",new Color(1,.65f,.2f,.7f)); player.bladeTrail=trail;
             var baseObject=new GameObject("Blade ribbon base");baseObject.transform.SetParent(sword,false);
-            Vector3 hilt=bounds.center;hilt[axis]=Mathf.Lerp(bounds.min[axis],bounds.max[axis],.16f);baseObject.transform.localPosition=hilt;
+            Vector3 hilt=Vector3.Lerp(butt,tip,.16f);baseObject.transform.localPosition=hilt;
             var ribbon=hero.AddComponent<SwordRibbon>();ribbon.bladeBase=baseObject.transform;ribbon.bladeTip=trailObject.transform;
             ribbon.material=UnlitMaterial("Broad sword sweep",Color.white);ribbon.material.shader=Shader.Find("Swordsman/SlashArc");
             player.swordRibbon=ribbon;

@@ -47,7 +47,7 @@ namespace SwordsmanTest
                 Vector3 toHero = Vector3.ProjectOnPlane(player.transform.position - targets[i].transform.position, Vector3.up).normalized;
                 return targets[i].transform.position + Vector3.up * .95f + toHero * .38f;
             }
-            return ribbon && ribbon.bladeTip ? ribbon.bladeTip.position : player.transform.position + Vector3.up;
+            return ribbon && ribbon.bladeTip ? ribbon.TipPoint : player.transform.position + Vector3.up;
         }
 
         void RememberTargetHits()
