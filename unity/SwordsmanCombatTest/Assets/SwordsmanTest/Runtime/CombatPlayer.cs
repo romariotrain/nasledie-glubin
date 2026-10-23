@@ -43,8 +43,8 @@ namespace SwordsmanTest
         readonly Collider[] overlaps = new Collider[64];
         readonly HashSet<TrainingDummy> hitTargets = new HashSet<TrainingDummy>();
         MoveDefinition move;
-        Vector3 velocity, actionDirection, spawn;
-        float locomotionTime, idleTime, freeze, attackBuffer;
+        Vector3 velocity, actionDirection, spawn, carry;
+        float locomotionTime, idleTime, freeze, attackBuffer, carryDecel, actionBlend;
         bool comboQueued, initialized;
 
         public void Initialize()
@@ -96,7 +96,7 @@ namespace SwordsmanTest
         {
             Initialize(); motor.enabled = false; transform.position = spawn; transform.rotation = Quaternion.identity; motor.enabled = true;
             foreach (var dummy in targets) dummy.ResetDummy();
-            velocity = Vector3.zero; State = "locomotion"; move = null; ActionTime = 0;
+            velocity = carry = Vector3.zero; State = "locomotion"; move = null; ActionTime = 0;
             DodgeCooldown = LungeCooldown = freeze = attackBuffer = 0; comboQueued = false; Health = 100;
             TotalHits = StartedMoves = DodgeCancels = 0;
             if (bladeTrail) { bladeTrail.emitting = false; bladeTrail.Clear(); }
@@ -126,6 +126,7 @@ namespace SwordsmanTest
             if (actionDirection.sqrMagnitude < .1f) actionDirection = transform.forward;
             transform.rotation = Quaternion.LookRotation(actionDirection);
             comboQueued = false; attackBuffer = 0; hitTargets.Clear(); StartedMoves++;
+            carry = Vector3.zero; actionBlend = 0;
             if (bladeTrail) bladeTrail.Clear();
         }
 
@@ -151,7 +152,19 @@ namespace SwordsmanTest
             {
                 StartMove("piercing_lunge", aim); LungeCooldown = tuning.lungeCooldown;
             }
-            else if (input.attack && State == "locomotion") StartMove("attack_1", aim);
+            else if (input.attack && State == "locomotion")
+            {
+                Vector3 runVelocity = velocity;
+                StartMove("attack_1", aim);
+                // A strike started from a run keeps the stride's momentum and bleeds it off over the wind-up.
+                if (runVelocity.magnitude > 1)
+                {
+                    carry = runVelocity * tuning.runAttackCarry;
+                    float stop = tuning.runAttackStopTime * (Vector3.Dot(runVelocity, actionDirection) < 0 ? .5f : 1);
+                    carryDecel = carry.magnitude / Mathf.Max(.01f, stop);
+                    actionBlend = tuning.runAttackBlend;
+                }
+            }
 
             SimulationDelta = freeze > 0 ? 0 : dt;
             freeze = Mathf.Max(0, freeze - dt);
@@ -176,8 +189,9 @@ namespace SwordsmanTest
                 float interval = move.travelEnd - move.travelStart;
                 float fraction = interval > 0 ? (Mathf.Clamp(ActionTime, move.travelStart, move.travelEnd) -
                     Mathf.Clamp(before, move.travelStart, move.travelEnd)) / interval : 0;
-                motor.Move((actionDirection * (move.travelDistance * fraction)) + Vector3.down * (2 * step));
-                animationPlayer.Sample(State, ActionTime, step, attacking ? .035f : .06f);
+                carry = Vector3.MoveTowards(carry, Vector3.zero, carryDecel * step);
+                motor.Move((actionDirection * (move.travelDistance * fraction)) + carry * step + Vector3.down * (2 * step));
+                animationPlayer.Sample(State, ActionTime, step, actionBlend > 0 ? actionBlend : attacking ? .035f : .06f);
                 Physics.SyncTransforms();
                 if (move.activeEnd > move.activeStart && ActionTime >= move.activeStart && before <= move.activeEnd)
                     ResolveHits(oldPosition, actionDirection);

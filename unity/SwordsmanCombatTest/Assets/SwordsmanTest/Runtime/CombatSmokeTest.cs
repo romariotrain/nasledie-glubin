@@ -133,6 +133,14 @@ namespace SwordsmanTest
             float runDistance = Vector3.ProjectOnPlane(player.transform.position - runStart, Vector3.up).magnitude;
             CheckThat("run_moves_character", runDistance > player.tuning.runSpeed*1.25f && runDistance < player.tuning.runSpeed*1.51f, "distance=" + runDistance+", speed="+player.tuning.runSpeed);
             CheckThat("run_clip_plays", player.animationPlayer.Current == "run", player.animationPlayer.Current);
+            // Still running: a strike along the stride slides on instead of stopping dead, then settles.
+            Vector3 strideDirection = player.CameraMove(Vector2.right), slideStart = player.transform.position;
+            Step(new CombatInput { attack = true, move = new Vector2(1, 0), aim = player.transform.position + strideDirection * 10 });
+            for (int i = 0; i < 17; i++) { Step(InputFrame()); yield return null; }
+            float slide = Vector3.Dot(player.transform.position - slideStart, strideDirection);
+            float expectedSlide = player.tuning.runSpeed * player.tuning.runAttackCarry * player.tuning.runAttackStopTime * .5f;
+            CheckThat("run_attack_keeps_momentum", player.State == "attack_1" && Mathf.Abs(slide - expectedSlide) < .15f,
+                "slide=" + slide + ", expected=" + expectedSlide);
 
             player.ResetArena(); player.Teleport(new Vector3(-5, .025f, -4), Vector3.forward);
             Vector3 dodgeStart = player.transform.position; bool invulnerabilityTested = false;
