@@ -16,6 +16,7 @@ p.add_argument('--out', type=Path, default=ROOT / 'art/characters/swordsman/flat
 p.add_argument('--size', type=int, default=2048)
 p.add_argument('--source', type=Path, default=ROOT / 'art/characters/swordsman/hunyuan_combat_v010/swordsman_basecolor_2048.png')
 p.add_argument('--poster-out', type=Path, help='Also write the posterized variant (painted folds kept as 2-3 tones per zone) here')
+p.add_argument('--poster-version', default='v001', choices=['v001', 'v002'])
 args = p.parse_args()
 
 # Poster variant: same zones, warmer dark trousers and darker boots (the flat test read blue/orange in game),
@@ -24,6 +25,13 @@ POSTER_PALETTE = {'coat': (46, 42, 50), 'red': (150, 22, 26), 'cloth': (50, 44, 
                   'boot': (74, 44, 28), 'glove': (56, 38, 28), 'skin': (214, 150, 112), 'hair': (78, 48, 30)}
 TONE_FACTORS = (.66, 1.0, 1.3)
 TWO_TONE = {'skin', 'red', 'glove'}
+ZONE_FACTORS = {}
+HAIR_EDGE_PX = 0
+if args.poster_version == 'v002':
+    # User feedback on v001: darker, more contrasting hair with a dark edge; lighter-weight boots.
+    POSTER_PALETTE.update(hair=(58, 35, 22), boot=(58, 36, 24))
+    ZONE_FACTORS = {'hair': (.52, 1.0, 1.22), 'boot': (.72, 1.0, 1.12)}
+    HAIR_EDGE_PX = 9
 
 # Palette after the concept sheet (#2 simplified + #4 outlined): near-black coat, one strong red, warm leather.
 PALETTE = {
@@ -191,15 +199,21 @@ if args.poster_out:
     combined = np.asarray(Image.fromarray(combined).filter(ImageFilter.ModeFilter(5)))
     lab_p, tone = combined // 3, combined % 3
     tone = np.where(features, 0, tone)
+    if HAIR_EDGE_PX:
+        # Hair border in UV (hairline, fringe and tips): force the darkest tone.
+        hair = (lab_p == index['hair']).astype(np.uint8) * 255
+        inner = np.asarray(Image.fromarray(hair).filter(ImageFilter.MinFilter(HAIR_EDGE_PX))) > 0
+        tone = np.where((hair > 0) & ~inner, 0, tone)
     base = np.array([POSTER_PALETTE[n] for n in names], dtype=np.float32)[lab_p]
-    factor = np.array(TONE_FACTORS, dtype=np.float32)[tone][..., None]
+    table = np.array([ZONE_FACTORS.get(n, TONE_FACTORS) for n in names], dtype=np.float32)
+    factor = table[lab_p, tone][..., None]
     poster = Image.fromarray(np.clip(base * factor, 0, 255).astype(np.uint8), 'RGB')
     args.poster_out.mkdir(parents=True, exist_ok=True)
-    poster_path = args.poster_out / 'swordsman_basecolor_poster_v001.png'; poster.save(poster_path)
+    poster_path = args.poster_out / f'swordsman_basecolor_poster_{args.poster_version}.png'; poster.save(poster_path)
     (args.poster_out / 'receipt.json').write_text(json.dumps(dict(
         zones_from=str(args.out.relative_to(ROOT)), source_map=receipt['source_map'], source_map_sha256=receipt['source_map_sha256'],
         method='Flat-zone labels; inside each zone the painted luminance (2px blur) is split by percentiles into '
-               '3 tones (2 for skin/red/glove), 5px mode filter on (zone, tone); tone factors %s' % (TONE_FACTORS,),
+               '3 tones (2 for skin/red/glove), 5px mode filter on (zone, tone); tone factors %s, per-zone %s, hair edge %dpx' % (TONE_FACTORS, ZONE_FACTORS, HAIR_EDGE_PX),
         palette=POSTER_PALETTE, thresholds=thresholds, texture_sha256=hashlib.sha256(poster_path.read_bytes()).hexdigest(),
         limits='Same mesh and UVs; folds come from the old painted shading, quantized'), indent=2), encoding='utf-8')
     print('POSTER', poster_path)

@@ -16,8 +16,10 @@ namespace SwordsmanTest
         // Defaults: original lighting and camera with the posterized hero map; other variants on F2/F3 or the command line.
         public static int Mode = 0;
         public static int PixelScale = 2;
-        // Hero basecolour: 0 painted, 1 flat zones, 2 posterized zones (chosen by the user, default).
-        public static int Flat = 2;
+        // Hero basecolour: 0 painted, 1 flat zones, 2 posterized v001 (user's pick), 3 posterized v002 with darker
+        // edged hair, lighter boots and a stronger outer outline (default, after feedback on v001).
+        public static int Flat = 3;
+        public static float HeroOutlinePixels = 1.5f;
         // Sharpness tests: negative bias samples sharper mip levels of the hero maps; NoMsaa turns camera MSAA off.
         public static float MipBias = 0;
         public static bool NoMsaa = false;
@@ -30,7 +32,7 @@ namespace SwordsmanTest
         [Tooltip("Hero key yaw relative to the camera, degrees; ~90 lights the hero from the side")] public float keyYaw = 105;
         [Range(10, 80)] public float keyPitch = 32;
         Camera view; Material post; Light heroKey; Quaternion originalKey; bool keyCaptured;
-        Renderer hero; Texture2D flatMap, posterMap; MaterialPropertyBlock heroBlock;
+        Renderer hero; Texture2D flatMap, posterMap, posterMap2; MaterialPropertyBlock heroBlock;
         static readonly int RimId = Shader.PropertyToID("_StyleRim"), BandsId = Shader.PropertyToID("_StyleBands");
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -57,6 +59,7 @@ namespace SwordsmanTest
             if (player) hero = player.GetComponentInChildren<SkinnedMeshRenderer>();
             flatMap = Resources.Load<Texture2D>("StyleTest/hero_flat_v001");
             posterMap = Resources.Load<Texture2D>("StyleTest/hero_poster_v001");
+            posterMap2 = Resources.Load<Texture2D>("StyleTest/hero_poster_v002");
             if (NoMsaa) view.allowMSAA = false;
             if (MipBias != 0 && hero)
             {
@@ -65,6 +68,7 @@ namespace SwordsmanTest
                         if (m && m.HasProperty(id) && m.GetTexture(id)) m.GetTexture(id).mipMapBias = MipBias;
                 if (flatMap) flatMap.mipMapBias = MipBias;
                 if (posterMap) posterMap.mipMapBias = MipBias;
+                if (posterMap2) posterMap2.mipMapBias = MipBias;
             }
             Apply();
         }
@@ -72,7 +76,7 @@ namespace SwordsmanTest
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.F2)) { Mode = (Mode + 1) % 3; Apply(); }
-            if (Input.GetKeyDown(KeyCode.F3)) { Flat = (Flat + 1) % 3; Apply(); }
+            if (Input.GetKeyDown(KeyCode.F3)) { Flat = (Flat + 1) % 4; Apply(); }
             if (Mode > 0 && heroKey)
             {
                 // Keep the key at a fixed angle to the view, so the camera always sees a lit and a shadowed side.
@@ -92,8 +96,9 @@ namespace SwordsmanTest
             {
                 heroBlock ??= new MaterialPropertyBlock();
                 hero.GetPropertyBlock(heroBlock);
-                var map = Flat == 1 ? flatMap : Flat == 2 ? posterMap : null;
-                if (map) { heroBlock.SetTexture("_MainTex", map); heroBlock.SetFloat("_BumpScale", 0); heroBlock.SetFloat("_RedBoost", 1); }
+                var map = Flat == 1 ? flatMap : Flat == 2 ? posterMap : Flat == 3 ? posterMap2 : null;
+                if (map) { heroBlock.SetTexture("_MainTex", map); heroBlock.SetFloat("_BumpScale", 0); heroBlock.SetFloat("_RedBoost", 1);
+                    if (Flat == 3) heroBlock.SetFloat("_OutlinePixels", HeroOutlinePixels); }
                 else heroBlock.Clear();
                 hero.SetPropertyBlock(heroBlock);
             }
