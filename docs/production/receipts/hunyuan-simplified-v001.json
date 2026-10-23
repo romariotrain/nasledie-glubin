@@ -1,0 +1,36 @@
+{
+  "model": "tencent/Hunyuan3D-2mini",
+  "subfolder": "hunyuan3d-dit-v2-mini",
+  "source": "art\\characters\\swordsman\\reference\\swordsman_simplified_v001.png",
+  "source_sha256": "4317d8539709b223eb531d6c11934d053219d84ec20f18effc2af52a41f06f23",
+  "crop": [
+    0,
+    0,
+    1024,
+    1536
+  ],
+  "seed": 12345,
+  "steps": 50,
+  "resolution": 384,
+  "seconds": 68.69875836372375,
+  "vertices": 293808,
+  "faces": 587588,
+  "bounds": [
+    [
+      -0.5301969051361084,
+      -0.999605119228363,
+      -0.34809112548828125
+    ],
+    [
+      0.6240717172622681,
+      1.000275731086731,
+      0.3483560383319855
+    ]
+  ],
+  "watertight": false,
+  "textures": false,
+  "rig": false,
+  "gpu": "NVIDIA GeForce RTX 3060 Ti",
+  "peak_vram_bytes": 2361961472,
+  "output_sha256": "89c2581ea3819e66a856ccc510412ea6dbddf5cbc8a015d318a0531a248a5163"
+}

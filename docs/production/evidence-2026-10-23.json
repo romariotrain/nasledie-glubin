@@ -1,0 +1,167 @@
+{
+  "audit": "Existing sealed baseline integrity; no new engine run or artistic approval",
+  "baseline": {
+    "character": "v010",
+    "scene": "Assets/SwordsmanTest/Scenes/DungeonCombatTest.unity",
+    "validation": "dungeon_v003",
+    "unity": "m_EditorVersion: 6000.6.6f1",
+    "blender": "5.2.3 LTS",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "triangles": 11980,
+    "bones": 31,
+    "clip_names": [
+      "idle",
+      "run",
+      "attack_1",
+      "attack_2",
+      "attack_3",
+      "dodge",
+      "piercing_lunge",
+      "hurt",
+      "death"
+    ],
+    "functional_checks": 24
+  },
+  "checks": [
+    {
+      "name": "idle_ignores_mouse_facing",
+      "passed": true,
+      "detail": "(0.00, 0.00, 1.00)"
+    },
+    {
+      "name": "run_faces_movement_not_mouse",
+      "passed": true,
+      "detail": "(-0.68, 0.00, 0.73)"
+    },
+    {
+      "name": "stop_preserves_facing",
+      "passed": true,
+      "detail": "(-0.68, 0.00, 0.73)"
+    },
+    {
+      "name": "attack_aims_at_cursor",
+      "passed": true,
+      "detail": "(0.00, 0.00, -1.00)"
+    },
+    {
+      "name": "stationary_dodge_uses_facing",
+      "passed": true,
+      "detail": "(0.00, 0.00, 1.00)"
+    },
+    {
+      "name": "lunge_aims_at_cursor",
+      "passed": true,
+      "detail": "(1.00, 0.00, 0.00)"
+    },
+    {
+      "name": "nine_imported_clips",
+      "passed": true,
+      "detail": "9"
+    },
+    {
+      "name": "distinct_three_hit_combo",
+      "passed": true,
+      "detail": "attack_1,attack_2,attack_3,locomotion"
+    },
+    {
+      "name": "each_strike_hits_once",
+      "passed": true,
+      "detail": "hits=3"
+    },
+    {
+      "name": "combo_damage_20_25_45",
+      "passed": true,
+      "detail": "hp=110"
+    },
+    {
+      "name": "combo_returns_to_locomotion",
+      "passed": true,
+      "detail": "locomotion"
+    },
+    {
+      "name": "run_moves_character",
+      "passed": true,
+      "detail": "distance=6,064538, speed=4,3"
+    },
+    {
+      "name": "run_clip_plays",
+      "passed": true,
+      "detail": "run"
+    },
+    {
+      "name": "dodge_iframes_reject_damage",
+      "passed": true,
+      "detail": "hp=100"
+    },
+    {
+      "name": "dodge_code_distance",
+      "passed": true,
+      "detail": "3"
+    },
+    {
+      "name": "dodge_iframe_window_seen",
+      "passed": true,
+      "detail": "window entered"
+    },
+    {
+      "name": "damage_outside_iframes",
+      "passed": true,
+      "detail": "hp=90"
+    },
+    {
+      "name": "startup_dodge_cancel_blocked",
+      "passed": true,
+      "detail": "attack_1"
+    },
+    {
+      "name": "recovery_dodge_cancel_allowed",
+      "passed": true,
+      "detail": "dodge"
+    },
+    {
+      "name": "cancel_toggle_off_blocks_recovery",
+      "passed": true,
+      "detail": "attack_1"
+    },
+    {
+      "name": "lunge_code_distance",
+      "passed": true,
+      "detail": "3,8"
+    },
+    {
+      "name": "lunge_hits_targets_in_line",
+      "passed": true,
+      "detail": "1/1"
+    },
+    {
+      "name": "lunge_stops_at_wall",
+      "passed": true,
+      "detail": "(8.50, 0.03, 0.00)"
+    },
+    {
+      "name": "dodge_stops_at_wall",
+      "passed": true,
+      "detail": "(8.50, 0.03, 0.00)"
+    }
+  ],
+  "source_run_stance": {
+    "reference_speed_m_s": 3.9,
+    "tested_intervals": 4,
+    "max_ankle_displacement_error_per_frame_m": 0.0005362037349911068,
+    "limits": "Ankle trajectory only, assumes matching controller speed; not a sole/friction simulation"
+  },
+  "hash_verified_files": 428,
+  "hash_mismatches": [],
+  "tracked_files": {
+    "unity": 0,
+    "art": 0,
+    "tools": 0,
+    "docs": 14
+  },
+  "source_manifest_sha256": "642983e24b17e4a7db16ff0fbd91486887f4b049f316743324547cc6bbf855b3",
+  "engine_receipt_sha256": "03053b48b508d6422989af16b7933ffa60e1c3c27ed89c8bea69f868a5da10bc",
+  "limits": [
+    "Existing receipt verification is not a fresh build or clean-machine restoration",
+    "No production performance, enemy crowd, exhaustive collision or gameplay quality guarantee"
+  ]
+}
