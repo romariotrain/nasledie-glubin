@@ -13,10 +13,11 @@ namespace SwordsmanTest
     [RequireComponent(typeof(Camera))]
     public class StylePost : MonoBehaviour
     {
-        // Defaults keep the original look; the test variants stay available on F2/F3 or the command line.
+        // Defaults: original lighting and camera with the posterized hero map; other variants on F2/F3 or the command line.
         public static int Mode = 0;
         public static int PixelScale = 2;
-        public static int Flat = 0; // hero basecolour: 0 painted, 1 flat zones, 2 posterized zones
+        // Hero basecolour: 0 painted, 1 flat zones, 2 posterized zones (chosen by the user, default).
+        public static int Flat = 2;
         // Sharpness tests: negative bias samples sharper mip levels of the hero maps; NoMsaa turns camera MSAA off.
         public static float MipBias = 0;
         public static bool NoMsaa = false;
