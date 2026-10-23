@@ -16,6 +16,9 @@ namespace SwordsmanTest
         public static int Mode = 0;
         public static int PixelScale = 2;
         public static bool Flat = false;
+        // Sharpness tests: negative bias samples sharper mip levels of the hero maps; NoMsaa turns camera MSAA off.
+        public static float MipBias = 0;
+        public static bool NoMsaa = false;
         [Range(.5f, 3)] public float outlineWidth = 1.6f;
         public float depthEdge = .12f;
         [Tooltip("Inner lines where neighbouring normals differ more than this cosine; low = only sharp folds")]
@@ -35,6 +38,8 @@ namespace SwordsmanTest
             int style = Array.IndexOf(args, "-style"); if (style >= 0 && style + 1 < args.Length) int.TryParse(args[style + 1], out Mode);
             int pixel = Array.IndexOf(args, "-pixel"); if (pixel >= 0 && pixel + 1 < args.Length) int.TryParse(args[pixel + 1], out PixelScale);
             int flat = Array.IndexOf(args, "-flat"); if (flat >= 0 && flat + 1 < args.Length) Flat = args[flat + 1] != "0";
+            int mip = Array.IndexOf(args, "-mipbias"); if (mip >= 0 && mip + 1 < args.Length) float.TryParse(args[mip + 1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out MipBias);
+            int msaa = Array.IndexOf(args, "-msaa"); if (msaa >= 0 && msaa + 1 < args.Length) NoMsaa = args[msaa + 1] == "0";
             var camera = Camera.main;
             if (camera && !camera.GetComponent<StylePost>()) camera.gameObject.AddComponent<StylePost>();
         }
@@ -48,7 +53,16 @@ namespace SwordsmanTest
             if (keyObject) { heroKey = keyObject.GetComponent<Light>(); originalKey = heroKey.transform.rotation; keyCaptured = true; }
             var player = FindAnyObjectByType<CombatPlayer>();
             if (player) hero = player.GetComponentInChildren<SkinnedMeshRenderer>();
-            flatMap = Resources.Load<Texture2D>("StyleTest/hero_flat_v001");            Apply();
+            flatMap = Resources.Load<Texture2D>("StyleTest/hero_flat_v001");
+            if (NoMsaa) view.allowMSAA = false;
+            if (MipBias != 0 && hero)
+            {
+                foreach (var m in hero.sharedMaterials)
+                    foreach (var id in new[] { "_MainTex", "_BumpMap" })
+                        if (m && m.HasProperty(id) && m.GetTexture(id)) m.GetTexture(id).mipMapBias = MipBias;
+                if (flatMap) flatMap.mipMapBias = MipBias;
+            }
+            Apply();
         }
 
         void Update()
