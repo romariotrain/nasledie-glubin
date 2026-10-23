@@ -15,7 +15,15 @@ p.add_argument('--faces', type=Path, required=True)
 p.add_argument('--out', type=Path, default=ROOT / 'art/characters/swordsman/flat_zones_v001')
 p.add_argument('--size', type=int, default=2048)
 p.add_argument('--source', type=Path, default=ROOT / 'art/characters/swordsman/hunyuan_combat_v010/swordsman_basecolor_2048.png')
+p.add_argument('--poster-out', type=Path, help='Also write the posterized variant (painted folds kept as 2-3 tones per zone) here')
 args = p.parse_args()
+
+# Poster variant: same zones, warmer dark trousers and darker boots (the flat test read blue/orange in game),
+# and per-zone tone steps taken from the painted map's own light/shadow.
+POSTER_PALETTE = {'coat': (46, 42, 50), 'red': (150, 22, 26), 'cloth': (50, 44, 46), 'leather': (80, 47, 28),
+                  'boot': (74, 44, 28), 'glove': (56, 38, 28), 'skin': (214, 150, 112), 'hair': (78, 48, 30)}
+TONE_FACTORS = (.66, 1.0, 1.3)
+TWO_TONE = {'skin', 'red', 'glove'}
 
 # Palette after the concept sheet (#2 simplified + #4 outlined): near-black coat, one strong red, warm leather.
 PALETTE = {
@@ -160,3 +168,38 @@ receipt = dict(source_faces=str(args.faces.name), source_texture=data['image'], 
                limits='Same mesh and UVs; zone borders follow existing triangles; no new geometry')
 (args.out / 'receipt.json').write_text(json.dumps(receipt, indent=2), encoding='utf-8')
 print('FLAT_ZONES', json.dumps(dict(raw=raw, final=final)))
+
+if args.poster_out:
+    # Luminance of the painted map, lightly blurred so tone borders become shapes rather than noise.
+    lum_img = Image.fromarray((source @ np.array([.299, .587, .114]) * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(2))
+    lum = np.asarray(lum_img, dtype=np.float32) / 255
+    tone = np.ones_like(lab, dtype=np.uint8)
+    thresholds = {}
+    for n in names:
+        zone = lab == index[n]
+        if not zone.any(): continue
+        values = lum[zone & (own > 0)] if (zone & (own > 0)).any() else lum[zone]
+        if n in TWO_TONE:
+            cut = float(np.percentile(values, 45)); tone[zone] = np.where(lum[zone] < cut, 0, 1)
+            thresholds[n] = [round(cut, 3)]
+        else:
+            low, high = (float(np.percentile(values, q)) for q in (35, 82))
+            tone[zone] = np.where(lum[zone] < low, 0, np.where(lum[zone] > high, 2, 1))
+            thresholds[n] = [round(low, 3), round(high, 3)]
+    # Clean the tone shapes without crossing zone borders: filter the combined (zone, tone) label.
+    combined = (lab.astype(np.int32) * 3 + tone).astype(np.uint8)
+    combined = np.asarray(Image.fromarray(combined).filter(ImageFilter.ModeFilter(5)))
+    lab_p, tone = combined // 3, combined % 3
+    tone = np.where(features, 0, tone)
+    base = np.array([POSTER_PALETTE[n] for n in names], dtype=np.float32)[lab_p]
+    factor = np.array(TONE_FACTORS, dtype=np.float32)[tone][..., None]
+    poster = Image.fromarray(np.clip(base * factor, 0, 255).astype(np.uint8), 'RGB')
+    args.poster_out.mkdir(parents=True, exist_ok=True)
+    poster_path = args.poster_out / 'swordsman_basecolor_poster_v001.png'; poster.save(poster_path)
+    (args.poster_out / 'receipt.json').write_text(json.dumps(dict(
+        zones_from=str(args.out.relative_to(ROOT)), source_map=receipt['source_map'], source_map_sha256=receipt['source_map_sha256'],
+        method='Flat-zone labels; inside each zone the painted luminance (2px blur) is split by percentiles into '
+               '3 tones (2 for skin/red/glove), 5px mode filter on (zone, tone); tone factors %s' % (TONE_FACTORS,),
+        palette=POSTER_PALETTE, thresholds=thresholds, texture_sha256=hashlib.sha256(poster_path.read_bytes()).hexdigest(),
+        limits='Same mesh and UVs; folds come from the old painted shading, quantized'), indent=2), encoding='utf-8')
+    print('POSTER', poster_path)
