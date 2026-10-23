@@ -16,9 +16,9 @@ namespace SwordsmanTest
         // Defaults: original lighting and camera with the posterized hero map; other variants on F2/F3 or the command line.
         public static int Mode = 0;
         public static int PixelScale = 2;
-        // Hero basecolour: 0 painted, 1 flat zones, 2 posterized v001 (user's pick), 3 posterized v002 with darker
-        // edged hair, lighter boots and a stronger outer outline (default, after feedback on v001).
-        public static int Flat = 3;
+        // Hero basecolour: 0 painted, 1 flat zones, 2 posterized v001 (user's pick, default), 3 posterized v002 with
+        // darker edged hair, lighter boots and a stronger outer outline (tried, user kept v001).
+        public static int Flat = 2;
         public static float HeroOutlinePixels = 1.5f;
         // Sharpness tests: negative bias samples sharper mip levels of the hero maps; NoMsaa turns camera MSAA off.
         public static float MipBias = 0;
