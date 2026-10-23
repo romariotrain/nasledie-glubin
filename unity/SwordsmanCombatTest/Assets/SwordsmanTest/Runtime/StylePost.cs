@@ -12,9 +12,10 @@ namespace SwordsmanTest
     [RequireComponent(typeof(Camera))]
     public class StylePost : MonoBehaviour
     {
-        public static int Mode = 1;
+        // Defaults keep the original look; the test variants stay available on F2/F3 or the command line.
+        public static int Mode = 0;
         public static int PixelScale = 2;
-        public static bool Flat = true;
+        public static bool Flat = false;
         [Range(.5f, 3)] public float outlineWidth = 1.6f;
         public float depthEdge = .12f;
         [Tooltip("Inner lines where neighbouring normals differ more than this cosine; low = only sharp folds")]
@@ -83,7 +84,7 @@ namespace SwordsmanTest
         [ImageEffectOpaque]
         void OnRenderImage(RenderTexture source, RenderTexture destination)
         {
-            if (Mode == 0 || !post) { Graphics.Blit(source, destination); return; }
+            if (Mode == 0 || !post) { Graphics.Blit(source, destination); return; } // original look: plain copy
             // At 1/N resolution one texel is already N screen pixels wide.
             post.SetFloat("_OutlineWidth", Mode == 2 ? Mathf.Max(1, outlineWidth / Mathf.Max(1, PixelScale) * 1.25f) : outlineWidth);
             post.SetFloat("_DepthEdge", depthEdge);
