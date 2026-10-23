@@ -1,0 +1,72 @@
+{
+  "source_faces": "faces.json",
+  "source_texture": "swordsman_basecolor_2048.png.001",
+  "faces": 11171,
+  "method": "Per-face body part (dominant deform bone) + hue/value of the old painted map, mode filter on edge adjacency, islands < 6 faces merged; border faces refined per pixel between their own and neighbouring zones by painted colour, 7px mode filter; dark painted features kept inside head skin",
+  "source_map": "art\\characters\\swordsman\\hunyuan_combat_v010\\swordsman_basecolor_2048.png",
+  "source_map_sha256": "69a326efe01295258ab1dae4c73d6b604e5cf56816178edb9c2ab428fcc11912",
+  "palette": {
+    "coat": [
+      46,
+      42,
+      50
+    ],
+    "red": [
+      158,
+      20,
+      24
+    ],
+    "cloth": [
+      64,
+      62,
+      76
+    ],
+    "leather": [
+      86,
+      50,
+      30
+    ],
+    "boot": [
+      92,
+      56,
+      34
+    ],
+    "glove": [
+      56,
+      38,
+      28
+    ],
+    "skin": [
+      222,
+      156,
+      118
+    ],
+    "hair": [
+      72,
+      44,
+      28
+    ]
+  },
+  "raw_counts": {
+    "coat": 3897,
+    "cloth": 1829,
+    "leather": 570,
+    "red": 1717,
+    "boot": 1094,
+    "hair": 930,
+    "glove": 495,
+    "skin": 639
+  },
+  "final_counts": {
+    "coat": 3996,
+    "cloth": 1827,
+    "red": 1578,
+    "leather": 546,
+    "boot": 1109,
+    "hair": 986,
+    "skin": 599,
+    "glove": 530
+  },
+  "texture_sha256": "6ffc3b35759e7db0021fb8751ee27229e5930bd6e5e875410b86aa00317e2838",
+  "limits": "Same mesh and UVs; zone borders follow existing triangles; no new geometry"
+}

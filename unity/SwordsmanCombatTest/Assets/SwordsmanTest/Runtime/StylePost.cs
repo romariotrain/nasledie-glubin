@@ -8,11 +8,13 @@ namespace SwordsmanTest
     //   0  current look
     //   1  ink outline from depth+normals, rim light, hero key light from the side
     //   2  mode 1 rendered at 1/N resolution and upscaled without filtering (crisp, painted edges)
+    // F3 / "-flat 0|1" swaps the hero's painted basecolour for the flat colour-zone map and drops normal detail.
     [RequireComponent(typeof(Camera))]
     public class StylePost : MonoBehaviour
     {
         public static int Mode = 1;
         public static int PixelScale = 2;
+        public static bool Flat = true;
         [Range(.5f, 3)] public float outlineWidth = 1.6f;
         public float depthEdge = .12f;
         [Tooltip("Inner lines where neighbouring normals differ more than this cosine; low = only sharp folds")]
@@ -22,6 +24,7 @@ namespace SwordsmanTest
         [Tooltip("Hero key yaw relative to the camera, degrees; ~90 lights the hero from the side")] public float keyYaw = 105;
         [Range(10, 80)] public float keyPitch = 32;
         Camera view; Material post; Light heroKey; Quaternion originalKey; bool keyCaptured;
+        Renderer hero; Texture2D flatMap; MaterialPropertyBlock heroBlock;
         static readonly int RimId = Shader.PropertyToID("_StyleRim"), BandsId = Shader.PropertyToID("_StyleBands");
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -30,6 +33,7 @@ namespace SwordsmanTest
             string[] args = Environment.GetCommandLineArgs();
             int style = Array.IndexOf(args, "-style"); if (style >= 0 && style + 1 < args.Length) int.TryParse(args[style + 1], out Mode);
             int pixel = Array.IndexOf(args, "-pixel"); if (pixel >= 0 && pixel + 1 < args.Length) int.TryParse(args[pixel + 1], out PixelScale);
+            int flat = Array.IndexOf(args, "-flat"); if (flat >= 0 && flat + 1 < args.Length) Flat = args[flat + 1] != "0";
             var camera = Camera.main;
             if (camera && !camera.GetComponent<StylePost>()) camera.gameObject.AddComponent<StylePost>();
         }
@@ -41,12 +45,15 @@ namespace SwordsmanTest
             if (shader && shader.isSupported) post = new Material(shader) { hideFlags = HideFlags.HideAndDontSave };
             var keyObject = GameObject.Find("Hero key (character only)");
             if (keyObject) { heroKey = keyObject.GetComponent<Light>(); originalKey = heroKey.transform.rotation; keyCaptured = true; }
-            Apply();
+            var player = FindAnyObjectByType<CombatPlayer>();
+            if (player) hero = player.GetComponentInChildren<SkinnedMeshRenderer>();
+            flatMap = Resources.Load<Texture2D>("StyleTest/hero_flat_v001");            Apply();
         }
 
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.F2)) { Mode = (Mode + 1) % 3; Apply(); }
+            if (Input.GetKeyDown(KeyCode.F3)) { Flat = !Flat; Apply(); }
             if (Mode > 0 && heroKey)
             {
                 // Keep the key at a fixed angle to the view, so the camera always sees a lit and a shadowed side.
@@ -62,6 +69,14 @@ namespace SwordsmanTest
             Shader.SetGlobalFloat(RimId, Mode > 0 ? rim : 0);
             Shader.SetGlobalFloat(BandsId, Mode > 0 ? 1 : 0);
             if (Mode == 0 && keyCaptured) heroKey.transform.rotation = originalKey;
+            if (hero && flatMap)
+            {
+                heroBlock ??= new MaterialPropertyBlock();
+                hero.GetPropertyBlock(heroBlock);
+                if (Flat) { heroBlock.SetTexture("_MainTex", flatMap); heroBlock.SetFloat("_BumpScale", 0); heroBlock.SetFloat("_RedBoost", 1); }
+                else heroBlock.Clear();
+                hero.SetPropertyBlock(heroBlock);
+            }
         }
 
         // Opaque-only: ink and pixelation happen before slash arcs and sparks, which stay smooth on top.
