@@ -1,0 +1,20 @@
+# Blender automatic backup copies; editable .blend sources are tracked.
+*.blend1
+*.blend2
+__pycache__/
+work/
+# Unity generated caches and local build outputs.
+unity/**/Library/
+unity/**/Temp/
+unity/**/Obj/
+unity/**/Logs/
+unity/**/UserSettings/
+unity/**/Builds/
+unity/**/*.csproj
+unity/**/*.sln
+unity/**/.vs/
+unity/**/MemoryCaptures/
+unity/**/Recordings/
+# OS noise.
+Thumbs.db
+desktop.ini
