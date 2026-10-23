@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4956147880385074082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0009999999}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0074999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -176,7 +176,7 @@ Transform:
   m_GameObject: {fileID: 7226791283346375054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.0061399997}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00035999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -311,6 +311,11 @@ MonoBehaviour:
   bladeBase: {fileID: 8711590596084249630}
   bladeTip: {fileID: 4463857027958099507}
   material: {fileID: 2100000, guid: 5c44d42e7e4c47f47874d78fc4ff5d44, type: 2}
+  smoothing: 4
+  sweepSpeed: 10
+  strikeLead: 0.02
+  strikeTail: 0.08
+  flatten: 0.3
 --- !u!114 &6932450267359850311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,7 +437,7 @@ PrefabInstance:
     - target: {fileID: 8317413316086197524, guid: 0ce7e0caa4f329d4d8ba95e41ee0757d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 76757a6cb844ed844bcc182447745c9b, type: 2}
+      objectReference: {fileID: 2100000, guid: 6d938e910ccfe4f44b87581c578af488, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

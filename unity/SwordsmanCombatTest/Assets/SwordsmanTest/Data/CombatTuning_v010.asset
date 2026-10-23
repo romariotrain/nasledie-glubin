@@ -19,6 +19,9 @@ MonoBehaviour:
   dodgeCooldown: 0.55
   lungeCooldown: 1.1
   allowRecoveryDodgeCancel: 1
+  runAttackCarry: 1
+  runAttackStopTime: 0.3
+  runAttackBlend: 0.12
   moves:
   - id: attack_1
     duration: 0.4

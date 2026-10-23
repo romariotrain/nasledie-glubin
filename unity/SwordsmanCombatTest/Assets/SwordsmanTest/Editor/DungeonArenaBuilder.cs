@@ -86,7 +86,9 @@ namespace SwordsmanTest.Editor
         static void CharacterReadability()
         {
             var hero=GameObject.Find("Player_Swordsman");
-            string path=Root+"/Hero graphic v002.mat";
+            // v003: posterized colour-zone basecolour chosen by the user (poster_zones_v001), no normal detail.
+            // v002 stays on disk for older prefabs/scenes that still reference it.
+            string path=Root+"/Hero graphic v003.mat";
             var original=AssetDatabase.LoadAssetAtPath<Material>("Assets/SwordsmanTest/Materials/SwordsmanAtlas.mat");
             var material=AssetDatabase.LoadAssetAtPath<Material>(path);
             if(!material){material=new Material(original);AssetDatabase.CreateAsset(material,path);}
@@ -95,6 +97,9 @@ namespace SwordsmanTest.Editor
             material.SetFloat("_MidLevel",.82f);material.SetFloat("_LitLevel",1.08f);
             material.SetFloat("_BandWidth",.012f);material.SetFloat("_RedBoost",1.32f);
             material.SetFloat("_OutlinePixels",.85f);material.SetColor("_OutlineColor",new Color(.022f,.018f,.028f));
+            var poster=AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/SwordsmanTest/Art/swordsman_basecolor_poster_v001.png");
+            if(!poster) throw new Exception("Missing Art/swordsman_basecolor_poster_v001.png");
+            material.mainTexture=poster;material.SetFloat("_BumpScale",0);material.SetFloat("_RedBoost",1);
             EditorUtility.SetDirty(material);
             var steel=Mat("Bright hero blade",new Color(.83f,.90f,.98f),.30f,.32f);
             foreach(var renderer in hero.GetComponentsInChildren<Renderer>())

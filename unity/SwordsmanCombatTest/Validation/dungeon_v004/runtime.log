@@ -1,0 +1,388 @@
+Mono path[0] = 'C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/unity-dungeon-test/Build/SwordsmanCombatTest_Data/Managed'
+Mono config path = 'C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/unity-dungeon-test/Build/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 6 interfaces on host : 0) 192.168.0.129 1) 192.168.56.1 2) 26.182.145.255 3) 192.168.80.1 4) 169.254.83.107 5) 10.6.7.1
+Player connection [159028]  Target information:
+
+Player connection [159028]  * "[IP] 192.168.0.129 [Port] 55001 [Flags] 2 [Guid] 3504506120 [EditorId] 2408163355 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-50B15JB) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Swordsman Combat Test" 
+
+Player connection [159028]  * "[IP] 192.168.56.1 [Port] 55001 [Flags] 2 [Guid] 3504506120 [EditorId] 2408163355 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-50B15JB) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Swordsman Combat Test" 
+
+Player connection [159028]  * "[IP] 26.182.145.255 [Port] 55001 [Flags] 2 [Guid] 3504506120 [EditorId] 2408163355 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-50B15JB) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Swordsman Combat Test" 
+
+Player connection [159028]  * "[IP] 192.168.80.1 [Port] 55001 [Flags] 2 [Guid] 3504506120 [EditorId] 2408163355 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-50B15JB) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Swordsman Combat Test" 
+
+Player connection [159028]  * "[IP] 169.254.83.107 [Port] 55001 [Flags] 2 [Guid] 3504506120 [EditorId] 2408163355 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-50B15JB) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Swordsman Combat Test" 
+
+Player connection [159028]  * "[IP] 10.6.7.1 [Port] 55001 [Flags] 2 [Guid] 3504506120 [EditorId] 2408163355 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-50B15JB) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Swordsman Combat Test" 
+
+Player connection [159028] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.6.6f1 (d20c9ac777da)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/unity-dungeon-test/Build/SwordsmanCombatTest_Data/UnitySubsystems
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2489)
+    Vendor:   NVIDIA
+    VRAM:     8024 MB
+    Driver:   32.0.15.9186
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.009 seconds
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+UnloadTime: 1.210600 ms
+COMBAT_CHECK idle_ignores_mouse_facing: True (0.00, 0.00, 1.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:92)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK run_faces_movement_not_mouse: True (-0.68, 0.00, 0.73)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:95)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK stop_preserves_facing: True (-0.68, 0.00, 0.73)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK attack_aims_at_cursor: True (0.00, 0.00, -1.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK stationary_dodge_uses_facing: True (0.00, 0.00, 1.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:103)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK lunge_aims_at_cursor: True (1.00, 0.00, 0.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:106)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK nine_imported_clips: True 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:109)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK distinct_three_hit_combo: True attack_1,attack_2,attack_3,locomotion
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:121)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK each_strike_hits_once: True hits=3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK combo_damage_20_25_45: True hp=110
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:123)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK combo_returns_to_locomotion: True locomotion
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:124)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK run_moves_character: True distance=6,064192, speed=4,3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:134)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK run_clip_plays: True run
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK run_attack_keeps_momentum: True slide=0,6091567, expected=0,645
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:142)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK dodge_iframes_reject_damage: True hp=100
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:154)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK dodge_code_distance: True 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:160)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK dodge_iframe_window_seen: True window entered
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:161)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK damage_outside_iframes: True hp=90
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK startup_dodge_cancel_blocked: True attack_1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:168)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK recovery_dodge_cancel_allowed: True dodge
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:171)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK cancel_toggle_off_blocks_recovery: True attack_1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:178)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK lunge_code_distance: True 3,8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:190)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK lunge_hits_targets_in_line: True 1/1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:191)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK lunge_stops_at_wall: True (8.50, 0.03, 0.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:199)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_CHECK dodge_stops_at_wall: True (8.50, 0.03, 0.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:CheckThat (string,bool,string) (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:64)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:206)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+COMBAT_SMOKE_FINISHED True
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SwordsmanTest.CombatSmokeTest:Finish () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:217)
+SwordsmanTest.CombatSmokeTest/<Run>d__17:MoveNext () (at C:/Users/romam/OneDrive/Рабочий стол/game/nasledie-glubin/work/UnityDungeonPreview_v001/Assets/SwordsmanTest/Runtime/CombatSmokeTest.cs:210)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792788280771,"processId":159132,"allocatedMemory":46798,"memoryLabels":[{"Default":9208},{"NewDelete":104},{"Manager":8628},{"VertexData":1440},{"GfxDevice":936},{"Audio":544},{"Serialization":17000},{"String":634},{"PoolAlloc":96},{"ScriptManager":5696},{"CodeReload":440},{"CloudService":144},{"VR":1928},{"Video":144},{"Subsystems":96},{"CoreBusinessMetrics":128}]}
