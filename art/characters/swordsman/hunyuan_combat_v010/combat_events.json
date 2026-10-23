@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "fps": 30,
+  "time_unit": "seconds_from_clip_start",
+  "status": "Suggested initial timings; gameplay controller not implemented or playtested",
+  "root_motion": false,
+  "forward_blender": [
+    0,
+    -1,
+    0
+  ],
+  "run_reference_speed_m_s": 3.9,
+  "clips": {
+    "attack_1": {
+      "startup": [
+        0,
+        0.1
+      ],
+      "active": [
+        0.1,
+        0.2
+      ],
+      "recovery": [
+        0.2,
+        0.4
+      ],
+      "hit": 0.1667,
+      "combo_next": "attack_2",
+      "combo_handoff": 0.4,
+      "input_buffer": [
+        0.16,
+        0.4
+      ],
+      "dodge_cancel_suggested": [
+        0.24,
+        0.4
+      ]
+    },
+    "attack_2": {
+      "startup": [
+        0,
+        0.08
+      ],
+      "active": [
+        0.08,
+        0.23
+      ],
+      "recovery": [
+        0.23,
+        0.4
+      ],
+      "hit": 0.1667,
+      "combo_next": "attack_3",
+      "combo_handoff": 0.4,
+      "input_buffer": [
+        0.16,
+        0.4
+      ],
+      "dodge_cancel_suggested": [
+        0.27,
+        0.4
+      ]
+    },
+    "attack_3": {
+      "startup": [
+        0,
+        0.2
+      ],
+      "active": [
+        0.2,
+        0.34
+      ],
+      "recovery": [
+        0.34,
+        0.6666666666666666
+      ],
+      "hit": 0.3333333333333333,
+      "contact_pose_hold": [
+        0.3333333333333333,
+        0.4
+      ],
+      "heavy": true,
+      "dodge_cancel_suggested": [
+        0.46,
+        0.6666666666666666
+      ]
+    },
+    "dodge": {
+      "movement_window": [
+        0.0333,
+        0.2667
+      ],
+      "invulnerability_suggested": [
+        0.0667,
+        0.2333
+      ],
+      "distance_owned_by_controller": true
+    },
+    "piercing_lunge": {
+      "startup": [
+        0,
+        0.1333
+      ],
+      "active": [
+        0.1333,
+        0.2667
+      ],
+      "recovery": [
+        0.2667,
+        0.5333333333333333
+      ],
+      "hit": 0.2333,
+      "movement_window": [
+        0.1333,
+        0.2667
+      ],
+      "distance_owned_by_controller": true
+    },
+    "hurt": {
+      "duration": 0.23333333333333334
+    },
+    "death": {
+      "duration": 1.2,
+      "hold_last_pose": true
+    }
+  },
+  "gameplay_only": [
+    "damage",
+    "hitboxes",
+    "hitstop",
+    "camera shake",
+    "knockback",
+    "invulnerability",
+    "dash/lunge displacement"
+  ],
+  "deferred": [
+    "circular_slash"
+  ],
+  "not_requested": [
+    "walk",
+    "block",
+    "parry",
+    "heavy_attack",
+    "jump",
+    "crouch"
+  ],
+  "run_gait": {
+    "period": 0.7333333333333333,
+    "stance_fraction": 0.26,
+    "stance_travel": 0.7435999999999999,
+    "plant_core": [
+      0.045,
+      0.14
+    ],
+    "track_width": 0.21
+  }
+}

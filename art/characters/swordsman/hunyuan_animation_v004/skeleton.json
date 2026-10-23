@@ -1,0 +1,467 @@
+[
+  {
+    "name": "Root",
+    "head": [
+      0,
+      -1,
+      0
+    ],
+    "tail": [
+      0,
+      -0.86,
+      0
+    ],
+    "parent": null,
+    "deform": false
+  },
+  {
+    "name": "Hips",
+    "head": [
+      0,
+      -0.06,
+      0
+    ],
+    "tail": [
+      0,
+      0.13,
+      0
+    ],
+    "parent": "Root",
+    "deform": true
+  },
+  {
+    "name": "Spine",
+    "head": [
+      0,
+      0.13,
+      0
+    ],
+    "tail": [
+      0,
+      0.35,
+      0
+    ],
+    "parent": "Hips",
+    "deform": true
+  },
+  {
+    "name": "Chest",
+    "head": [
+      0,
+      0.35,
+      0
+    ],
+    "tail": [
+      0,
+      0.56,
+      0
+    ],
+    "parent": "Spine",
+    "deform": true
+  },
+  {
+    "name": "Neck",
+    "head": [
+      0,
+      0.56,
+      0
+    ],
+    "tail": [
+      0,
+      0.69,
+      0
+    ],
+    "parent": "Chest",
+    "deform": true
+  },
+  {
+    "name": "Head",
+    "head": [
+      0,
+      0.69,
+      0
+    ],
+    "tail": [
+      0,
+      0.95,
+      0
+    ],
+    "parent": "Neck",
+    "deform": true
+  },
+  {
+    "name": "Shoulder.L",
+    "head": [
+      0,
+      0.52,
+      0.04
+    ],
+    "tail": [
+      0.225,
+      0.475,
+      0.04
+    ],
+    "parent": "Chest",
+    "deform": true
+  },
+  {
+    "name": "UpperArm.L",
+    "head": [
+      0.225,
+      0.475,
+      0.04
+    ],
+    "tail": [
+      0.35,
+      0.215,
+      0.06
+    ],
+    "parent": "Shoulder.L",
+    "deform": true
+  },
+  {
+    "name": "Forearm.L",
+    "head": [
+      0.35,
+      0.215,
+      0.06
+    ],
+    "tail": [
+      0.415,
+      0.015,
+      0.12
+    ],
+    "parent": "UpperArm.L",
+    "deform": true
+  },
+  {
+    "name": "Hand.L",
+    "head": [
+      0.415,
+      0.015,
+      0.12
+    ],
+    "tail": [
+      0.445,
+      -0.125,
+      0.15
+    ],
+    "parent": "Forearm.L",
+    "deform": true
+  },
+  {
+    "name": "Thigh.L",
+    "head": [
+      0.145,
+      -0.09,
+      0.06
+    ],
+    "tail": [
+      0.22,
+      -0.55,
+      0.045
+    ],
+    "parent": "Hips",
+    "deform": true
+  },
+  {
+    "name": "Shin.L",
+    "head": [
+      0.22,
+      -0.55,
+      0.045
+    ],
+    "tail": [
+      0.25,
+      -0.845,
+      0.02
+    ],
+    "parent": "Thigh.L",
+    "deform": true
+  },
+  {
+    "name": "Foot.L",
+    "head": [
+      0.25,
+      -0.845,
+      0.02
+    ],
+    "tail": [
+      0.27,
+      -0.95,
+      0.18
+    ],
+    "parent": "Shin.L",
+    "deform": true
+  },
+  {
+    "name": "Toe.L",
+    "head": [
+      0.27,
+      -0.95,
+      0.18
+    ],
+    "tail": [
+      0.28,
+      -0.95,
+      0.31
+    ],
+    "parent": "Foot.L",
+    "deform": true
+  },
+  {
+    "name": "Coat_Front.L",
+    "head": [
+      0.16,
+      0.025,
+      0.2
+    ],
+    "tail": [
+      0.23,
+      -0.25,
+      0.26
+    ],
+    "parent": "Hips",
+    "deform": true
+  },
+  {
+    "name": "Coat_Front.L_Tip",
+    "head": [
+      0.23,
+      -0.25,
+      0.26
+    ],
+    "tail": [
+      0.3,
+      -0.45,
+      0.27
+    ],
+    "parent": "Coat_Front.L",
+    "deform": true
+  },
+  {
+    "name": "Coat_Back.L",
+    "head": [
+      0.16,
+      0.025,
+      -0.16
+    ],
+    "tail": [
+      0.23,
+      -0.25,
+      -0.25
+    ],
+    "parent": "Hips",
+    "deform": true
+  },
+  {
+    "name": "Coat_Back.L_Tip",
+    "head": [
+      0.23,
+      -0.25,
+      -0.25
+    ],
+    "tail": [
+      0.3,
+      -0.45,
+      -0.29
+    ],
+    "parent": "Coat_Back.L",
+    "deform": true
+  },
+  {
+    "name": "Shoulder.R",
+    "head": [
+      0,
+      0.52,
+      -0.065
+    ],
+    "tail": [
+      -0.245,
+      0.475,
+      -0.065
+    ],
+    "parent": "Chest",
+    "deform": true
+  },
+  {
+    "name": "UpperArm.R",
+    "head": [
+      -0.245,
+      0.475,
+      -0.065
+    ],
+    "tail": [
+      -0.375,
+      0.215,
+      -0.075
+    ],
+    "parent": "Shoulder.R",
+    "deform": true
+  },
+  {
+    "name": "Forearm.R",
+    "head": [
+      -0.375,
+      0.215,
+      -0.075
+    ],
+    "tail": [
+      -0.445,
+      0.015,
+      -0.045
+    ],
+    "parent": "UpperArm.R",
+    "deform": true
+  },
+  {
+    "name": "Hand.R",
+    "head": [
+      -0.445,
+      0.015,
+      -0.045
+    ],
+    "tail": [
+      -0.48,
+      -0.125,
+      -0.025
+    ],
+    "parent": "Forearm.R",
+    "deform": true
+  },
+  {
+    "name": "Thigh.R",
+    "head": [
+      -0.16,
+      -0.09,
+      -0.02
+    ],
+    "tail": [
+      -0.225,
+      -0.55,
+      -0.04
+    ],
+    "parent": "Hips",
+    "deform": true
+  },
+  {
+    "name": "Shin.R",
+    "head": [
+      -0.225,
+      -0.55,
+      -0.04
+    ],
+    "tail": [
+      -0.245,
+      -0.845,
+      -0.055
+    ],
+    "parent": "Thigh.R",
+    "deform": true
+  },
+  {
+    "name": "Foot.R",
+    "head": [
+      -0.245,
+      -0.845,
+      -0.055
+    ],
+    "tail": [
+      -0.27,
+      -0.95,
+      0.1
+    ],
+    "parent": "Shin.R",
+    "deform": true
+  },
+  {
+    "name": "Toe.R",
+    "head": [
+      -0.27,
+      -0.95,
+      0.1
+    ],
+    "tail": [
+      -0.28,
+      -0.95,
+      0.2
+    ],
+    "parent": "Foot.R",
+    "deform": true
+  },
+  {
+    "name": "Coat_Front.R",
+    "head": [
+      -0.16,
+      0.025,
+      0.2
+    ],
+    "tail": [
+      -0.23,
+      -0.25,
+      0.26
+    ],
+    "parent": "Hips",
+    "deform": true
+  },
+  {
+    "name": "Coat_Front.R_Tip",
+    "head": [
+      -0.23,
+      -0.25,
+      0.26
+    ],
+    "tail": [
+      -0.3,
+      -0.45,
+      0.27
+    ],
+    "parent": "Coat_Front.R",
+    "deform": true
+  },
+  {
+    "name": "Coat_Back.R",
+    "head": [
+      -0.16,
+      0.025,
+      -0.16
+    ],
+    "tail": [
+      -0.23,
+      -0.25,
+      -0.25
+    ],
+    "parent": "Hips",
+    "deform": true
+  },
+  {
+    "name": "Coat_Back.R_Tip",
+    "head": [
+      -0.23,
+      -0.25,
+      -0.25
+    ],
+    "tail": [
+      -0.3,
+      -0.45,
+      -0.29
+    ],
+    "parent": "Coat_Back.R",
+    "deform": true
+  },
+  {
+    "name": "WeaponSocket.R",
+    "head": [
+      -0.48,
+      -0.11,
+      -0.025
+    ],
+    "tail": [
+      -0.48,
+      -0.2,
+      -0.025
+    ],
+    "parent": "Hand.R",
+    "deform": false
+  }
+]

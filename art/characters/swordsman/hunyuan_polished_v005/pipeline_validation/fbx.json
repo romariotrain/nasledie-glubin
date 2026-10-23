@@ -1,0 +1,94 @@
+{
+  "file": "C:\\Users\\romam\\OneDrive\\\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b\\game\\nasledie-glubin\\art\\characters\\swordsman\\hunyuan_polished_v005\\SK_Swordsman_Polished_v005.fbx",
+  "sha256": "315bb304090277d665e90c436845a7b72669306e29e3c7d04e9c818369cd56c8",
+  "spec_sha256": "bf4c671eb9849e9bd68c2a3063c1e299b2af082827c6aefdf8ed50e1f1f12b4f",
+  "blender": "5.2.3 LTS",
+  "triangles": 11980,
+  "bones": 31,
+  "meshes": [
+    {
+      "name": "SM_Longsword",
+      "triangles": 88
+    },
+    {
+      "name": "SK_Swordsman_Animation",
+      "triangles": 11892
+    }
+  ],
+  "excluded_bone_display_shapes": [],
+  "skinned_meshes": 1,
+  "bad_weight_vertices": 0,
+  "images": [
+    {
+      "name": "swordsman_basecolor_2048.png.001",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "Swordsman_Normal_2048.001",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "swordsman_roughness_2048.png.001",
+      "size": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "Idle",
+      "duration_s": 2.0,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 0.021421830145849263
+    },
+    {
+      "name": "Walk_InPlace",
+      "duration_s": 1.0,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 0.8109595574093065
+    },
+    {
+      "name": "Slash_01",
+      "duration_s": 1.2,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 1.5273394913870133
+    },
+    {
+      "name": "Start_Walk",
+      "duration_s": 0.3,
+      "endpoint_gap_m": 0.5632895848667593,
+      "sampled_motion_m": 0.5034319101469955
+    },
+    {
+      "name": "Stop_Walk",
+      "duration_s": 0.3,
+      "endpoint_gap_m": 0.5632895848667593,
+      "sampled_motion_m": 0.5017601711032716
+    },
+    {
+      "name": "Game_Demo",
+      "duration_s": 7.8,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 0.23794179187842937
+    }
+  ],
+  "technical_pass": true,
+  "errors": [],
+  "not_checked": [
+    "silhouette",
+    "joint deformation quality",
+    "grip contact",
+    "cloth collisions",
+    "root motion trajectory",
+    "transition velocity continuity",
+    "engine import",
+    "runtime FPS"
+  ]
+}

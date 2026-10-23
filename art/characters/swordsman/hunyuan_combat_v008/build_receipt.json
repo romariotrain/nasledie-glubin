@@ -1,0 +1,86 @@
+{
+  "source": "art\\characters\\swordsman\\hunyuan_combat_v007\\swordsman_combat_v007.blend",
+  "source_sha256": "d5393211cf369512e34a795632157afc0c9d820e62c069f3683ee186e73c212c",
+  "method": "Semantic UV palette bake, neutral relief maps, bounded Taubin smoothing of cloth/leather",
+  "palette_srgb": {
+    "coat": [
+      0.205,
+      0.21,
+      0.235
+    ],
+    "trousers": [
+      0.12,
+      0.135,
+      0.165
+    ],
+    "shirt": [
+      0.105,
+      0.12,
+      0.16
+    ],
+    "red": [
+      0.53,
+      0.075,
+      0.105
+    ],
+    "red_shadow": [
+      0.38,
+      0.045,
+      0.07
+    ],
+    "leather": [
+      0.24,
+      0.135,
+      0.085
+    ],
+    "boots": [
+      0.18,
+      0.105,
+      0.075
+    ],
+    "hair": [
+      0.145,
+      0.075,
+      0.055
+    ],
+    "hair_light": [
+      0.24,
+      0.125,
+      0.075
+    ],
+    "skin": [
+      0.79,
+      0.49,
+      0.31
+    ],
+    "brass": [
+      0.69,
+      0.47,
+      0.22
+    ]
+  },
+  "corner_class_counts": {
+    "coat": 13127,
+    "red": 4032,
+    "shirt": 1816,
+    "leather": 4118,
+    "trousers": 1870,
+    "boots": 3537,
+    "hair_light": 1500,
+    "hair": 1527,
+    "red_shadow": 285,
+    "skin": 1839,
+    "brass": 583
+  },
+  "geometry": {
+    "max_displacement_m": 0.007000025253957235,
+    "changed_vertices": 2732,
+    "triangles": 11980
+  },
+  "animation": "All nine v007 clips, rest skeleton, skin weights and timing preserved",
+  "limits": [
+    "Face detail reused; material classification is heuristic and visually reviewed",
+    "No new topology or triangle reduction",
+    "Neutral normal map intentionally removes original high-frequency folds"
+  ]
+}

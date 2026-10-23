@@ -1,0 +1,40 @@
+{
+  "source_sha256": "d5393211cf369512e34a795632157afc0c9d820e62c069f3683ee186e73c212c",
+  "method": "Visual inspection of final labeled key-pose contact sheet",
+  "reviewed_images": [
+    "keyframes\\idle\\001.png",
+    "keyframes\\run\\004.png",
+    "keyframes\\run\\009.png",
+    "keyframes\\run\\014.png",
+    "keyframes\\attack_1\\004.png",
+    "keyframes\\attack_1\\007.png",
+    "keyframes\\attack_1\\013.png",
+    "keyframes\\attack_2\\001.png",
+    "keyframes\\attack_2\\006.png",
+    "keyframes\\attack_2\\013.png",
+    "keyframes\\attack_3\\007.png",
+    "keyframes\\attack_3\\011.png",
+    "keyframes\\attack_3\\013.png",
+    "keyframes\\attack_3\\021.png",
+    "keyframes\\dodge\\003.png",
+    "keyframes\\dodge\\007.png",
+    "keyframes\\piercing_lunge\\005.png",
+    "keyframes\\piercing_lunge\\008.png",
+    "keyframes\\piercing_lunge\\011.png",
+    "keyframes\\hurt\\003.png",
+    "keyframes\\death\\013.png",
+    "keyframes\\death\\025.png",
+    "keyframes\\death\\037.png"
+  ],
+  "contact_sheet_sha256": "995cf409097c762558355d7581a7b90ad0060ae0abb49ed3a9cc8eb0a07ff3bc",
+  "findings": [
+    "Distinct diagonal/reverse-horizontal/heavy-overhead poses",
+    "Low dodge without roll; thrust aligned forward",
+    "Run leg alternation and backward death pose visible"
+  ],
+  "limits": [
+    "Key-pose review, not a live engine playtest",
+    "Motion feel, hitstop and cancellation rules require controller testing",
+    "Sampled cloth test does not prove every possible surface pair is collision-free"
+  ]
+}

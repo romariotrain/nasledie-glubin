@@ -1,0 +1,194 @@
+[
+  {
+    "file": "SK_Swordsman_Polished_v005.glb",
+    "character_triangles": 11892,
+    "sword_triangles": 88,
+    "bones": 31,
+    "images": 3,
+    "clips": [
+      {
+        "name": "Idle",
+        "frames": [
+          0.8000000715255737,
+          48.79999923706055
+        ],
+        "motion_metres": 0.015166003139443348,
+        "endpoint_error": 0.0
+      },
+      {
+        "name": "Walk_InPlace",
+        "frames": [
+          0.8000000715255737,
+          24.799999237060547
+        ],
+        "motion_metres": 0.18361321796901656,
+        "endpoint_error": 0.0
+      },
+      {
+        "name": "Slash_01",
+        "frames": [
+          0.8000000715255737,
+          29.600000381469727
+        ],
+        "motion_metres": 0.48876327754544424,
+        "endpoint_error": 0.0
+      },
+      {
+        "name": "Start_Walk",
+        "frames": [
+          0.8000000715255737,
+          8.0
+        ],
+        "motion_metres": 0.025071929243580288,
+        "endpoint_error": 0.21931065721973372
+      },
+      {
+        "name": "Stop_Walk",
+        "frames": [
+          0.8000000715255737,
+          8.0
+        ],
+        "motion_metres": 0.023557828124837418,
+        "endpoint_error": 0.21931065721973372
+      },
+      {
+        "name": "Game_Demo",
+        "frames": [
+          0.8000000715255737,
+          188.0
+        ],
+        "motion_metres": 0.0023421986938775884,
+        "endpoint_error": 0.0
+      }
+    ],
+    "transitions": [
+      {
+        "source": "Idle",
+        "target": "Start_Walk",
+        "max_position_gap_metres": 0.0
+      },
+      {
+        "source": "Start_Walk",
+        "target": "Walk_InPlace",
+        "max_position_gap_metres": 0.0
+      },
+      {
+        "source": "Walk_InPlace",
+        "target": "Stop_Walk",
+        "max_position_gap_metres": 0.0
+      },
+      {
+        "source": "Stop_Walk",
+        "target": "Idle",
+        "max_position_gap_metres": 0.0
+      },
+      {
+        "source": "Idle",
+        "target": "Slash_01",
+        "max_position_gap_metres": 0.0
+      },
+      {
+        "source": "Slash_01",
+        "target": "Idle",
+        "max_position_gap_metres": 0.0
+      }
+    ],
+    "sha256": "408c80e66fa65172c3f7d480d4c6fcfe321f37556b39c10ccf74ea57be5f2064"
+  },
+  {
+    "file": "SK_Swordsman_Polished_v005.fbx",
+    "character_triangles": 11892,
+    "sword_triangles": 88,
+    "bones": 31,
+    "images": 3,
+    "clips": [
+      {
+        "name": "Idle",
+        "frames": [
+          1.0,
+          61.0
+        ],
+        "motion_metres": 0.0151371120334013,
+        "endpoint_error": 0.0
+      },
+      {
+        "name": "Walk_InPlace",
+        "frames": [
+          1.0,
+          31.0
+        ],
+        "motion_metres": 0.18361329595404238,
+        "endpoint_error": 0.0
+      },
+      {
+        "name": "Slash_01",
+        "frames": [
+          1.0,
+          37.0
+        ],
+        "motion_metres": 0.4887635404998981,
+        "endpoint_error": 0.0
+      },
+      {
+        "name": "Start_Walk",
+        "frames": [
+          1.0,
+          10.0
+        ],
+        "motion_metres": 0.02507181813173016,
+        "endpoint_error": 0.21931057016456873
+      },
+      {
+        "name": "Stop_Walk",
+        "frames": [
+          1.0,
+          10.0
+        ],
+        "motion_metres": 0.02355786179012394,
+        "endpoint_error": 0.21931057016456873
+      },
+      {
+        "name": "Game_Demo",
+        "frames": [
+          1.0,
+          235.0
+        ],
+        "motion_metres": 0.007473034806894422,
+        "endpoint_error": 0.0
+      }
+    ],
+    "transitions": [
+      {
+        "source": "Idle",
+        "target": "Start_Walk",
+        "max_position_gap_metres": 2.936665505036469e-07
+      },
+      {
+        "source": "Start_Walk",
+        "target": "Walk_InPlace",
+        "max_position_gap_metres": 0.0
+      },
+      {
+        "source": "Walk_InPlace",
+        "target": "Stop_Walk",
+        "max_position_gap_metres": 0.0
+      },
+      {
+        "source": "Stop_Walk",
+        "target": "Idle",
+        "max_position_gap_metres": 2.936665505036469e-07
+      },
+      {
+        "source": "Idle",
+        "target": "Slash_01",
+        "max_position_gap_metres": 2.936665505036469e-07
+      },
+      {
+        "source": "Slash_01",
+        "target": "Idle",
+        "max_position_gap_metres": 2.936665505036469e-07
+      }
+    ],
+    "sha256": "315bb304090277d665e90c436845a7b72669306e29e3c7d04e9c818369cd56c8"
+  }
+]

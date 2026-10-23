@@ -1,0 +1,30 @@
+[
+  {
+    "file": "SK_Swordsman_Anim_v004.glb",
+    "triangles": 11898,
+    "bones": 31,
+    "normalized_weights": true,
+    "max_influences": 4,
+    "action_count": 1,
+    "frames": [
+      0.8000000715255737,
+      96.0
+    ],
+    "max_vertex_motion_metres": 0.4546986754621713,
+    "sha256": "5d517094ca21945e73acb8a1dd73a279cb9e3979e3f56a872a7374cee5ba614b"
+  },
+  {
+    "file": "SK_Swordsman_Anim_v004.fbx",
+    "triangles": 11898,
+    "bones": 31,
+    "normalized_weights": true,
+    "max_influences": 4,
+    "action_count": 1,
+    "frames": [
+      2.0,
+      121.0
+    ],
+    "max_vertex_motion_metres": 0.4546617930946577,
+    "sha256": "ccc13b6230284964ead92c2449295b60b2b3e955884e0782f42e17723300b7f0"
+  }
+]

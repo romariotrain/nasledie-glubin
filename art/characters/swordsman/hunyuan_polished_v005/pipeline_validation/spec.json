@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "asset_id": "swordsman",
+  "body_type": "humanoid",
+  "height_m": 1.8,
+  "target": "isometric action roguelite, PC; engine import pending",
+  "views": {
+    "front": "art/characters/swordsman/reference/swordsman_simplified_v001.png",
+    "back": "art/characters/swordsman/reference/swordsman_back_texture_v001.png"
+  },
+  "shape": {
+    "backend": "2mini",
+    "seed": 12345,
+    "steps": 30,
+    "resolution": 256
+  },
+  "budgets": {
+    "triangles_max": 12000,
+    "texture_size": 2048,
+    "max_influences": 4
+  },
+  "equipment": "Separate longsword, right hand socket; closed glove grip; no articulated fingers",
+  "clothing": "Long split coat; label coat and legs separately for collision audit",
+  "animations": [
+    {
+      "name": "Idle",
+      "duration_s": 2.0,
+      "loop": true,
+      "motion": "in_place",
+      "description": "Relaxed breathing, sword down"
+    },
+    {
+      "name": "Walk_InPlace",
+      "duration_s": 1.0,
+      "loop": true,
+      "motion": "in_place",
+      "description": "Walk cycle, approx 0.47 m/s travel in game"
+    },
+    {
+      "name": "Slash_01",
+      "duration_s": 1.2,
+      "loop": false,
+      "motion": "in_place",
+      "description": "One right-handed sword slash, return to idle"
+    },
+    {
+      "name": "Start_Walk",
+      "duration_s": 0.3,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Idle into first walk frame"
+    },
+    {
+      "name": "Stop_Walk",
+      "duration_s": 0.3,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Last walk frame into idle"
+    },
+    {
+      "name": "Game_Demo",
+      "duration_s": 7.8,
+      "loop": true,
+      "motion": "in_place",
+      "description": "Idle, start, two walk cycles, stop, slash, idle"
+    }
+  ]
+}

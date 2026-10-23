@@ -1,0 +1,22 @@
+{
+  "source": "art\\characters\\swordsman\\hunyuan_combat_v009\\swordsman_combat_v009.blend",
+  "source_sha256": "a40cbd709cfc1cf349ea46b2442436536cf7948404344a8b287cc48222af25f0",
+  "method": "Longer running leg trajectory and lower cadence, with code-driven speed matching",
+  "reference_speed_m_s": 3.9,
+  "default_speed_m_s": 4.3,
+  "cycle_s": 0.7333333333333333,
+  "stride_per_cycle_m": 2.86,
+  "step_length_m": 1.43,
+  "default_steps_per_minute": 180.41958041958043,
+  "previous": {
+    "default_speed_m_s": 3.6,
+    "stride_per_cycle_m": 1.8,
+    "step_length_m": 0.9,
+    "steps_per_minute": 240
+  },
+  "ik_reach_clamps_m": {
+    "Thigh.L": 0,
+    "Thigh.R": 0
+  },
+  "unchanged": "v009 free-arm pose, weapon arm, body mesh, rest skeleton, maps, other eight clips and all attack/dash/lunge timings"
+}

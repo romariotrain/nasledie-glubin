@@ -1,0 +1,32 @@
+{
+  "source": "art\\characters\\swordsman\\hunyuan_combat_v006\\swordsman_combat_v006.blend",
+  "source_sha256": "7bcca78808b36a194747f451e5fc055a04ae33e5180557f4fed9efc78692108f",
+  "topology_preserved": true,
+  "triangles": 11980,
+  "silhouette_changes": {
+    "shoulder_width_factor": 0.91,
+    "hip_width_factor": 0.88,
+    "leg_radius_factor": [
+      0.8,
+      0.88
+    ],
+    "boot_depth_factor": 0.85,
+    "lower_coat_depth_factor": 0.86,
+    "torso_depth_factor": 0.88
+  },
+  "motion_changes": [
+    "Narrow 21cm foot track",
+    "Heel pickup and toe-off",
+    "Forward body lean",
+    "Downward sword carry",
+    "Stronger opposing torso rotations in combo",
+    "Forward-leaning dash, trailing leg and braking"
+  ],
+  "helper_sha256": "7a6c2dad961005a9fcb1dd7217c50c26f3fcc54b8935695768afadfc49335f22",
+  "ik_reach_clamps_m": {
+    "UpperArm.R": 0,
+    "Thigh.L": 0,
+    "Thigh.R": 0
+  },
+  "scope": "Reference-directed local sculpt and FK animation; no new Hunyuan generation"
+}

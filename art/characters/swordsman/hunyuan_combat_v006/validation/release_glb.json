@@ -1,0 +1,114 @@
+{
+  "file": "C:\\Users\\romam\\OneDrive\\\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b\\game\\nasledie-glubin\\art\\characters\\swordsman\\hunyuan_combat_v006\\SK_Swordsman_Combat_v006.glb",
+  "sha256": "b7920db60892fea6810a0c543893b73eeda364c19f8346f5b7ca41fd76c14de2",
+  "spec_sha256": "895d6db8962ec4cfca351fe76761f9420850416dc42919458e1582364c81973f",
+  "blender": "5.2.3 LTS",
+  "triangles": 11980,
+  "bones": 31,
+  "meshes": [
+    {
+      "name": "SK_Swordsman_Animation",
+      "triangles": 11892
+    },
+    {
+      "name": "SM_Longsword",
+      "triangles": 88
+    }
+  ],
+  "excluded_bone_display_shapes": [
+    "Icosphere"
+  ],
+  "skinned_meshes": 1,
+  "bad_weight_vertices": 0,
+  "images": [
+    {
+      "name": "swordsman_basecolor_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "swordsman_normal_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "swordsman_roughness_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "name": "idle",
+      "duration_s": 1.999999965230624,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 0.010371375027772557
+    },
+    {
+      "name": "run",
+      "duration_s": 0.5999999890724818,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 0.6385012267391761
+    },
+    {
+      "name": "attack_1",
+      "duration_s": 0.3999999811251958,
+      "endpoint_gap_m": 1.509830428392996,
+      "sampled_motion_m": 1.7731487001207342
+    },
+    {
+      "name": "attack_2",
+      "duration_s": 0.3999999811251958,
+      "endpoint_gap_m": 1.9884477238390006,
+      "sampled_motion_m": 1.9086814097670652
+    },
+    {
+      "name": "attack_3",
+      "duration_s": 0.6666666318972906,
+      "endpoint_gap_m": 1.9128935771596662,
+      "sampled_motion_m": 1.9158976729519792
+    },
+    {
+      "name": "dodge",
+      "duration_s": 0.3333333383003871,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 0.30887112287917623
+    },
+    {
+      "name": "piercing_lunge",
+      "duration_s": 0.533333346247673,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 1.2384205808983026
+    },
+    {
+      "name": "hurt",
+      "duration_s": 0.23333335419495901,
+      "endpoint_gap_m": 0.0,
+      "sampled_motion_m": 0.33360153140031307
+    },
+    {
+      "name": "death",
+      "duration_s": 1.2000000129143398,
+      "endpoint_gap_m": 1.7745081827251172,
+      "sampled_motion_m": 1.7368632737368213
+    }
+  ],
+  "technical_pass": true,
+  "errors": [],
+  "not_checked": [
+    "silhouette",
+    "joint deformation quality",
+    "grip contact",
+    "cloth collisions",
+    "root motion trajectory",
+    "transition velocity continuity",
+    "engine import",
+    "runtime FPS"
+  ]
+}

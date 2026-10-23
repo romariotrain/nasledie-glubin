@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "Body_Exposed: shared rig; all vertices weighted; weights normalized",
+    "Body_Covered: shared rig; all vertices weighted; weights normalized",
+    "Hair_Starter: shared rig; all vertices weighted; weights normalized",
+    "Top_Longcoat: shared rig; all vertices weighted; weights normalized",
+    "Top_ShortJacket: shared rig; all vertices weighted; weights normalized",
+    "Legs_Trousers: shared rig; all vertices weighted; weights normalized",
+    "Hands_Gloves: shared rig; all vertices weighted; weights normalized",
+    "Feet_Boots: shared rig; all vertices weighted; weights normalized",
+    "Both swords follow the right hand socket when the forearm is posed",
+    "Equipment helper switches both tops and both weapons and restores the initial set"
+  ],
+  "not_checked": [
+    "Unity import",
+    "combat animation deformation extremes",
+    "production topology/UV suitability"
+  ]
+}

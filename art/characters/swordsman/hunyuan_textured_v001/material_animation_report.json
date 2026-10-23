@@ -1,0 +1,29 @@
+{
+  "character_triangles": 11898,
+  "sword_triangles": 88,
+  "bones": 31,
+  "uv_layers": 1,
+  "texture_size": 2048,
+  "clips": [
+    {
+      "name": "Idle",
+      "frames": 61,
+      "seconds": 2.0,
+      "loop": true
+    },
+    {
+      "name": "Walk_InPlace",
+      "frames": 31,
+      "seconds": 1.0,
+      "loop": true
+    },
+    {
+      "name": "Slash_01",
+      "frames": 37,
+      "seconds": 1.2,
+      "loop": false
+    }
+  ],
+  "material_method": "Front/rear concept projection to UV; CPU high-to-low tangent normal bake; authored roughness.",
+  "limitations": "Prototype clips. FK baked analytic two-bone foot placement; no runtime IK or collision solver; rear texture is inferred; no facial/finger animation."
+}

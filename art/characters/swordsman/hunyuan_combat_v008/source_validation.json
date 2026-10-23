@@ -1,0 +1,172 @@
+{
+  "source_sha256": "bf852873fb430a6980858f875fd3224e389fe290346b1305da0a7dc18a29fd1c",
+  "clips": {
+    "attack_1": {
+      "frames": [
+        1,
+        13
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.0022891166154295206,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 2.3469328880310059e-07
+    },
+    "attack_2": {
+      "frames": [
+        1,
+        13
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.00155236991122365,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 1.7881393432617188e-07
+    },
+    "attack_3": {
+      "frames": [
+        1,
+        21
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.0022891166154295206,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 3.1851232051849365e-07
+    },
+    "death": {
+      "frames": [
+        1,
+        37
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.0022891166154295206,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 2.3283064365386963e-07
+    },
+    "dodge": {
+      "frames": [
+        1,
+        11
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.0022891166154295206,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 1.9371509552001953e-07
+    },
+    "hurt": {
+      "frames": [
+        1,
+        8
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.0022891166154295206,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 2.0302832126617432e-07
+    },
+    "idle": {
+      "frames": [
+        1,
+        61
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.002336162608116865,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 2.3096799850463867e-07
+    },
+    "piercing_lunge": {
+      "frames": [
+        1,
+        17
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.0023186327889561653,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 3.133900463581085e-07
+    },
+    "run": {
+      "frames": [
+        1,
+        19
+      ],
+      "coat_leg_penetrations": [],
+      "minimum_geometry_z_m": -0.0019010012038052082,
+      "root_channel_max_drift": 0,
+      "socket_relative_matrix_max_error": 2.1606683731079102e-07
+    }
+  },
+  "transitions": [
+    {
+      "source": "idle",
+      "target": "attack_1",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 7.842641056745204
+    },
+    {
+      "source": "attack_1",
+      "target": "attack_2",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 1.5793250591623045
+    },
+    {
+      "source": "attack_2",
+      "target": "attack_3",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 0.7967014804603273
+    },
+    {
+      "source": "attack_3",
+      "target": "idle",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 1.3989999418382304
+    },
+    {
+      "source": "idle",
+      "target": "dodge",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 5.829779878332747
+    },
+    {
+      "source": "dodge",
+      "target": "idle",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 1.9380682231708992
+    },
+    {
+      "source": "idle",
+      "target": "piercing_lunge",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 2.7191408550545675
+    },
+    {
+      "source": "piercing_lunge",
+      "target": "idle",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 1.0391305062260434
+    },
+    {
+      "source": "idle",
+      "target": "hurt",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 5.802534338123466
+    },
+    {
+      "source": "hurt",
+      "target": "idle",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 0.6106046441852354
+    },
+    {
+      "source": "idle",
+      "target": "death",
+      "position_gap_m": 0.0,
+      "finite_difference_velocity_gap_m_s": 0.22923981658900466
+    }
+  ],
+  "errors": [],
+  "collision_method": "All frames; lower-coat vertices and face centroids vs labeled legs BVH + horizontal parity; >1mm; waist above z=.76 excluded",
+  "contact_test_limits": "Sampling, not exhaustive triangle-triangle proof; excludes torso/hand self intersections; no runtime cloth simulation",
+  "run_stance": {
+    "reference_speed_m_s": 3.0,
+    "tested_intervals": 2,
+    "max_ankle_displacement_error_per_frame_m": 0.00022936613384113286,
+    "limits": "Ankle trajectory only, assumes matching controller speed; not a sole/friction simulation"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "asset_id": "swordsman-combat-v009",
+  "status": "blender_and_export_validated_engine_pending",
+  "provenance": {
+    "source": "art\\characters\\swordsman\\hunyuan_combat_v007\\swordsman_combat_v007.blend",
+    "method": "Lowered free-arm FK pose with periodic cosine swing; only UpperArm.L and Forearm.L quaternion tracks in run changed",
+    "provider_generation": false
+  },
+  "files": {
+    "swordsman_combat_v009.blend": {
+      "bytes": 7894236,
+      "sha256": "a40cbd709cfc1cf349ea46b2442436536cf7948404344a8b287cc48222af25f0"
+    },
+    "SK_Swordsman_Combat_v009.glb": {
+      "bytes": 7980632,
+      "sha256": "d23d47bb1d4c642df6ca06e1645a54b5901ff91ffa764f7412d5b8811cfbbf73"
+    },
+    "SK_Swordsman_Combat_v009.fbx": {
+      "bytes": 11943116,
+      "sha256": "519dc8fe138481d94774da0ce4cd0fc2ddff3b2fa87dfe2251e4350566e16159"
+    },
+    "README.md": {
+      "bytes": 1197,
+      "sha256": "35a41cf2d17c626cedbedf73fa7ae78ee2392f867e69adc8a179ccbe12726ed8"
+    },
+    "spec.json": {
+      "bytes": 2604,
+      "sha256": "6faf138556b3bfd5ddfd523c7fa790cf41c33ffbf88ff995fb550f1261ba44b8"
+    },
+    "combat_events.json": {
+      "bytes": 2819,
+      "sha256": "a60b35b25136994dc7d52fe774424eb9c2b9b1e5f9a9a45e45869d97f72f8009"
+    },
+    "build_receipt.json": {
+      "bytes": 4413,
+      "sha256": "a8d84bf3472d78c6966767f64caff757986c0b452797848161374cad5689140f"
+    },
+    "cloth_correction.json": {
+      "bytes": 399,
+      "sha256": "b769e5c87ccf36ebd36a19196f7d524a80bd83e8edc91e5f28a0b7e341659fb6"
+    },
+    "key_reduction.json": {
+      "bytes": 53,
+      "sha256": "5b058a524771338dca6a32b65d2638a28b301feddd64a4a5c11287c1d6dd3d88"
+    },
+    "source_validation.json": {
+      "bytes": 4954,
+      "sha256": "52fb774562171868e35d9a656ec94bfc2a4327418a9f888be0e25faca5acc46b"
+    },
+    "roundtrip_validation.json": {
+      "bytes": 10312,
+      "sha256": "9093d74863ce1353d848019d513463c6ad1c7738896efb88a94d93c742da7405"
+    },
+    "visual_review.json": {
+      "bytes": 1562,
+      "sha256": "8e6ce6c83212475b514da26efa0dccfbe6ac9f470e08c7deb5e1b39099f0e89f"
+    },
+    "pose_contact_sheet.jpg": {
+      "bytes": 202572,
+      "sha256": "2088561dca9ddc0e8a088f67bf572ecff41a637ce9cecc19e7d8d39c9533868b"
+    },
+    "combo_preview.gif": {
+      "bytes": 9917079,
+      "sha256": "9b1061703cda198a348a8e11b72e8c9f99499ca4c7f84144d3d559e6f720436d"
+    },
+    "animation_set_preview.gif": {
+      "bytes": 13866264,
+      "sha256": "fbf8bb01afe95e00e996e58a023faaf26a324b4de7d77137e8e633ed771ddc16"
+    },
+    "validation\\release_glb.json": {
+      "bytes": 2868,
+      "sha256": "655820fb0966fdd300fb9c9b55180955e108f34336fd137a4e39ebab67c61804"
+    },
+    "validation\\release_fbx.json": {
+      "bytes": 2792,
+      "sha256": "94736986419de39a383dc1b05e59dbeaea1b634f5111408c0c6f4219b3a64d34"
+    },
+    "swordsman_basecolor_2048.png": {
+      "bytes": 3323341,
+      "sha256": "69a326efe01295258ab1dae4c73d6b604e5cf56816178edb9c2ab428fcc11912"
+    },
+    "swordsman_normal_2048.png": {
+      "bytes": 3376588,
+      "sha256": "49b6244e9734939f1b217770bbc1532112936a5aea91825c0eb865bba612a4e3"
+    },
+    "swordsman_roughness_2048.png": {
+      "bytes": 299099,
+      "sha256": "6a375259a7460f8abd2179b2a590d0c70de438e740af881cb400d261020ebf0d"
+    },
+    "attack_1.gif": {
+      "bytes": 928591,
+      "sha256": "8b8266d3ad2874b69de34a1084753707bc78eda68e61f8db03df8c7a93984c43"
+    },
+    "attack_2.gif": {
+      "bytes": 923954,
+      "sha256": "e2eaed99ce6199f3c9f9610edadb4c9f999c824f372f7bb29fee45afb691b283"
+    },
+    "attack_3.gif": {
+      "bytes": 1447274,
+      "sha256": "838a9a83d72319c013da8ccc9b7c90f1dffb20f54d2f0980efb583717fdada77"
+    },
+    "death.gif": {
+      "bytes": 2451724,
+      "sha256": "3424594b74c35700863b594010aaa1ac4f55715f9d820c3b07d9cb6928b4a605"
+    },
+    "dodge.gif": {
+      "bytes": 798802,
+      "sha256": "7f02e8257f5d9931af555b6a0f85241ab043b4bcd81c023014fe11ad11ff8844"
+    },
+    "hurt.gif": {
+      "bytes": 663200,
+      "sha256": "e841f624670f692974d4d147ffca76fa3721f231a9d604a579c85ab3e80821cb"
+    },
+    "idle.gif": {
+      "bytes": 4115306,
+      "sha256": "dc88dbd0640661387492cb077c5635b5868dabfad3b8475ca9f75a6be8868760"
+    },
+    "piercing_lunge.gif": {
+      "bytes": 1195754,
+      "sha256": "e675c9c32174cd96d8acf491d0e7409a8a1cb717887dbaaf2e0f4105b0265aea"
+    },
+    "run.gif": {
+      "bytes": 1341923,
+      "sha256": "9930f871128a08a6d78de87726b93d60d4341457d1539548aaddb20c06576af9"
+    }
+  },
+  "scripts": {
+    "tools\\blender\\build_swordsman_combat.py": "7a6c2dad961005a9fcb1dd7217c50c26f3fcc54b8935695768afadfc49335f22",
+    "tools\\blender\\fix_combat_cloth.py": "a131f374050f9335f5af31c5679d91858146717de3f022dc28304789d2cbf8f9",
+    "tools\\blender\\export_combat_swordsman.py": "37ec2db1941e1e72b03773ea16a55fb01e4eb037bc43f471c54e75ed4ad949dd",
+    "tools\\blender\\validate_combat_source.py": "1ffc26f738f33f44fd7594ed9604d6372b1324051b0257cc8abdaebe5b51fda1",
+    "tools\\blender\\validate_combat_roundtrip.py": "b5c8e89a98f0b61f7ecc632fb2fd6818dbbe3a754e4b4bc5020485215e468d4c",
+    "tools\\blender\\lower_free_arm_v009.py": "edd5171851495b2faafcc9deb3aceaefc39fef5a2fedd6f5a795c4e9e1519f2a"
+  },
+  "engine_validation": "not_run"
+}

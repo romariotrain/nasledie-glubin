@@ -1,0 +1,131 @@
+{
+  "asset_id": "swordsman-combat-v007",
+  "status": "blender_and_export_validated_engine_pending",
+  "provenance": "Preserved local swordsman v006; reference-directed proportion and motion revision v007; no new provider generation",
+  "files": {
+    "swordsman_combat_v007.blend": {
+      "bytes": 7894516,
+      "sha256": "d5393211cf369512e34a795632157afc0c9d820e62c069f3683ee186e73c212c"
+    },
+    "SK_Swordsman_Combat_v007.glb": {
+      "bytes": 7980772,
+      "sha256": "2d6791b06ea776b4b6738f053d62d3a0c00c43b0d2c1f8b139c6d2a82e82adee"
+    },
+    "SK_Swordsman_Combat_v007.fbx": {
+      "bytes": 11943036,
+      "sha256": "452882965a60b817ca40e4e07a429ab010526a786668a70bbe558353b38e9cee"
+    },
+    "README.md": {
+      "bytes": 1641,
+      "sha256": "9140e14a2221d1cb124423a6ec38d2d748494435aa5ae044daded6510536707a"
+    },
+    "spec.json": {
+      "bytes": 2604,
+      "sha256": "74cdb0e2b8d7960a9cb4cf394f77f1d97ac934fccd97159cd5c79e5418aef63a"
+    },
+    "combat_events.json": {
+      "bytes": 2819,
+      "sha256": "a60b35b25136994dc7d52fe774424eb9c2b9b1e5f9a9a45e45869d97f72f8009"
+    },
+    "build_receipt.json": {
+      "bytes": 1022,
+      "sha256": "b9ddf25974a7e42d2a7a69c8c58505d49084676792810891896e23c86de0caca"
+    },
+    "cloth_correction.json": {
+      "bytes": 508,
+      "sha256": "69a777dd0023e391b71eb5621ca174e9c57ad9663d0bf4a38066e3548f2393f6"
+    },
+    "key_reduction.json": {
+      "bytes": 53,
+      "sha256": "31c1c2bf8eae7c65d3fbe2cec14909379a6c5a36297c6ab6f890f713b737d012"
+    },
+    "source_validation.json": {
+      "bytes": 4954,
+      "sha256": "776abd65bd35a3983e8c0efff0b9eb740868736a595b476a4f67ee6fa0ab6430"
+    },
+    "roundtrip_validation.json": {
+      "bytes": 10312,
+      "sha256": "96363ccd27e54314f3758d1103a6afc1dadb2dc6e5b48ddf60e497e33a261657"
+    },
+    "visual_review.json": {
+      "bytes": 1562,
+      "sha256": "649f8219fa5bacc315b9c297d31095944806723f02d7e8abc798b2209697c3ff"
+    },
+    "pose_contact_sheet.jpg": {
+      "bytes": 202689,
+      "sha256": "995cf409097c762558355d7581a7b90ad0060ae0abb49ed3a9cc8eb0a07ff3bc"
+    },
+    "combo_preview.gif": {
+      "bytes": 9917079,
+      "sha256": "9b1061703cda198a348a8e11b72e8c9f99499ca4c7f84144d3d559e6f720436d"
+    },
+    "animation_set_preview.gif": {
+      "bytes": 13868087,
+      "sha256": "5ccabae169e8b418e887bf405839e1ddf584febffa044bde2a2c4de6725fbf78"
+    },
+    "validation\\release_glb.json": {
+      "bytes": 2868,
+      "sha256": "98689a64efd97b25cb65d6d9b02f42351e502e98d36a2a4724273d8825cbee97"
+    },
+    "validation\\release_fbx.json": {
+      "bytes": 2792,
+      "sha256": "463398802605518b225414c947983ebb60103f4c9b36b23a20189796383561f4"
+    },
+    "swordsman_basecolor_2048.png": {
+      "bytes": 3323341,
+      "sha256": "69a326efe01295258ab1dae4c73d6b604e5cf56816178edb9c2ab428fcc11912"
+    },
+    "swordsman_normal_2048.png": {
+      "bytes": 3376588,
+      "sha256": "49b6244e9734939f1b217770bbc1532112936a5aea91825c0eb865bba612a4e3"
+    },
+    "swordsman_roughness_2048.png": {
+      "bytes": 299099,
+      "sha256": "6a375259a7460f8abd2179b2a590d0c70de438e740af881cb400d261020ebf0d"
+    },
+    "attack_1.gif": {
+      "bytes": 928591,
+      "sha256": "8b8266d3ad2874b69de34a1084753707bc78eda68e61f8db03df8c7a93984c43"
+    },
+    "attack_2.gif": {
+      "bytes": 923954,
+      "sha256": "e2eaed99ce6199f3c9f9610edadb4c9f999c824f372f7bb29fee45afb691b283"
+    },
+    "attack_3.gif": {
+      "bytes": 1447274,
+      "sha256": "838a9a83d72319c013da8ccc9b7c90f1dffb20f54d2f0980efb583717fdada77"
+    },
+    "death.gif": {
+      "bytes": 2451724,
+      "sha256": "3424594b74c35700863b594010aaa1ac4f55715f9d820c3b07d9cb6928b4a605"
+    },
+    "dodge.gif": {
+      "bytes": 798802,
+      "sha256": "7f02e8257f5d9931af555b6a0f85241ab043b4bcd81c023014fe11ad11ff8844"
+    },
+    "hurt.gif": {
+      "bytes": 663200,
+      "sha256": "e841f624670f692974d4d147ffca76fa3721f231a9d604a579c85ab3e80821cb"
+    },
+    "idle.gif": {
+      "bytes": 4115306,
+      "sha256": "dc88dbd0640661387492cb077c5635b5868dabfad3b8475ca9f75a6be8868760"
+    },
+    "piercing_lunge.gif": {
+      "bytes": 1195754,
+      "sha256": "e675c9c32174cd96d8acf491d0e7409a8a1cb717887dbaaf2e0f4105b0265aea"
+    },
+    "run.gif": {
+      "bytes": 1343746,
+      "sha256": "e9153b305192fd421cd6075b1349b7630c683f771601d83ae25909eb882ab097"
+    }
+  },
+  "scripts": {
+    "tools\\blender\\build_swordsman_combat.py": "7a6c2dad961005a9fcb1dd7217c50c26f3fcc54b8935695768afadfc49335f22",
+    "tools\\blender\\fix_combat_cloth.py": "a131f374050f9335f5af31c5679d91858146717de3f022dc28304789d2cbf8f9",
+    "tools\\blender\\export_combat_swordsman.py": "37ec2db1941e1e72b03773ea16a55fb01e4eb037bc43f471c54e75ed4ad949dd",
+    "tools\\blender\\validate_combat_source.py": "1ffc26f738f33f44fd7594ed9604d6372b1324051b0257cc8abdaebe5b51fda1",
+    "tools\\blender\\validate_combat_roundtrip.py": "b5c8e89a98f0b61f7ecc632fb2fd6818dbbe3a754e4b4bc5020485215e468d4c"
+  },
+  "engine_validation": "not_run"
+}

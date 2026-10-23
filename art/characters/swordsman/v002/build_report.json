@@ -1,0 +1,51 @@
+{
+  "version": "v002",
+  "source": "art\\characters\\swordsman\\v001\\swordsman_modular_v001.blend",
+  "source_sha256": "10509487a88d2b0efeb2cc3d20d2fe9e6e9706e79ac45becaae329bf880efbb4",
+  "changes": [
+    "Integrated sculpted face and almond eyes",
+    "Curved layered hair locks",
+    "Longer draped coat with fitted sleeves, collar, folds and red lining",
+    "Both top variants retain shared rig and module IDs"
+  ],
+  "bones_preserved": true,
+  "modules": {
+    "Body_Covered": {
+      "vertices": 424,
+      "triangles": 820
+    },
+    "Body_Exposed": {
+      "vertices": 11252,
+      "triangles": 22292
+    },
+    "Feet_Boots": {
+      "vertices": 740,
+      "triangles": 1408
+    },
+    "Hair_Starter": {
+      "vertices": 4464,
+      "triangles": 8798
+    },
+    "Hands_Gloves": {
+      "vertices": 692,
+      "triangles": 1320
+    },
+    "Legs_Trousers": {
+      "vertices": 264,
+      "triangles": 508
+    },
+    "Top_Longcoat": {
+      "vertices": 16800,
+      "triangles": 33232
+    },
+    "Top_ShortJacket": {
+      "vertices": 13816,
+      "triangles": 27280
+    }
+  },
+  "limitations": [
+    "Provisional topology/weights, no animation-ready certification",
+    "No UV painting or Unity import check",
+    "Separate mesh patches remain at garment junctions"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "source": "art\\characters\\swordsman\\hunyuan_polished_v005\\swordsman_polished_v005.blend",
+  "source_sha256": "a5ec45af0f49f2ee2161723ce93fe2383887953b3440410300d10199268e7d97",
+  "method": "Authored grip/weapon paths and analytic limb IK baked to FK at 30fps",
+  "root_fixed": true,
+  "clips": [
+    {
+      "name": "idle",
+      "duration_s": 2.0,
+      "loop": true,
+      "motion": "in_place",
+      "description": "Neutral sword stance"
+    },
+    {
+      "name": "run",
+      "duration_s": 0.6,
+      "loop": true,
+      "motion": "in_place",
+      "description": "Energetic run, airborne swing, in place"
+    },
+    {
+      "name": "attack_1",
+      "duration_s": 0.4,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Quick right-to-left descending diagonal; small forward step"
+    },
+    {
+      "name": "attack_2",
+      "duration_s": 0.4,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Reverse left-to-right horizontal cut; ends in overhead preparation"
+    },
+    {
+      "name": "attack_3",
+      "duration_s": 0.6666666666666666,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Heavy overhead diagonal, weight transfer and 0.067s contact-pose hold"
+    },
+    {
+      "name": "dodge",
+      "duration_s": 0.3333333333333333,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Low short forward dash pose; no roll and no root travel"
+    },
+    {
+      "name": "piercing_lunge",
+      "duration_s": 0.5333333333333333,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Retract sword, thrust point forward, brief extension hold"
+    },
+    {
+      "name": "hurt",
+      "duration_s": 0.23333333333333334,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Brief recoil, return to neutral"
+    },
+    {
+      "name": "death",
+      "duration_s": 1.2,
+      "loop": false,
+      "motion": "in_place",
+      "description": "Fall backwards and hold final grounded pose"
+    }
+  ],
+  "max_limb_reach_clamp_m": 0.05697337842655098,
+  "limb_reach_clamp_m": {
+    "UpperArm.R": 0.05697337842655098,
+    "Thigh.L": 0,
+    "Thigh.R": 0
+  },
+  "limitations": [
+    "No articulated fingers",
+    "No runtime cloth physics",
+    "Timings require gameplay testing"
+  ]
+}

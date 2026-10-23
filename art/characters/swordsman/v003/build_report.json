@@ -1,0 +1,270 @@
+{
+  "version": "v003",
+  "blender": "5.2.2 LTS",
+  "modules": {
+    "Body_Torso": {
+      "tris": 668,
+      "verts": 336,
+      "materials": [
+        "M_SW_Skin"
+      ],
+      "slot": "body",
+      "hides_body": "",
+      "visible_in_default_outfit": false,
+      "bad_weight_verts": 0,
+      "max_influences": 4
+    },
+    "Body_UpperArms": {
+      "tris": 384,
+      "verts": 196,
+      "materials": [
+        "M_SW_Skin"
+      ],
+      "slot": "body",
+      "hides_body": "",
+      "visible_in_default_outfit": false,
+      "bad_weight_verts": 0,
+      "max_influences": 3
+    },
+    "Body_Forearms": {
+      "tris": 384,
+      "verts": 196,
+      "materials": [
+        "M_SW_Skin"
+      ],
+      "slot": "body",
+      "hides_body": "",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 2
+    },
+    "Body_Hands": {
+      "tris": 340,
+      "verts": 178,
+      "materials": [
+        "M_SW_Skin"
+      ],
+      "slot": "body",
+      "hides_body": "",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 2
+    },
+    "Body_Legs": {
+      "tris": 824,
+      "verts": 416,
+      "materials": [
+        "M_SW_Skin"
+      ],
+      "slot": "body",
+      "hides_body": "",
+      "visible_in_default_outfit": false,
+      "bad_weight_verts": 0,
+      "max_influences": 2
+    },
+    "Body_Feet": {
+      "tris": 384,
+      "verts": 196,
+      "materials": [
+        "M_SW_Skin"
+      ],
+      "slot": "body",
+      "hides_body": "",
+      "visible_in_default_outfit": false,
+      "bad_weight_verts": 0,
+      "max_influences": 3
+    },
+    "Head": {
+      "tris": 1668,
+      "verts": 854,
+      "materials": [
+        "M_SW_Skin",
+        "M_SW_Hair",
+        "M_SW_Eye",
+        "M_SW_Mouth"
+      ],
+      "slot": "head",
+      "hides_body": "",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 3
+    },
+    "Hair_Messy": {
+      "tris": 1468,
+      "verts": 839,
+      "materials": [
+        "M_SW_Hair"
+      ],
+      "slot": "hair",
+      "hides_body": "",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 1
+    },
+    "Top_Coat": {
+      "tris": 2992,
+      "verts": 1504,
+      "materials": [
+        "M_SW_Coat",
+        "M_SW_Lining"
+      ],
+      "slot": "top",
+      "hides_body": "Body_Torso,Body_UpperArms",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 4
+    },
+    "Under_Shirt": {
+      "tris": 664,
+      "verts": 360,
+      "materials": [
+        "M_SW_Shirt"
+      ],
+      "slot": "under",
+      "hides_body": "Body_Torso",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 4
+    },
+    "Legs_Trousers": {
+      "tris": 846,
+      "verts": 440,
+      "materials": [
+        "M_SW_Trousers"
+      ],
+      "slot": "legs",
+      "hides_body": "Body_Legs",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 4
+    },
+    "Feet_Boots": {
+      "tris": 1016,
+      "verts": 512,
+      "materials": [
+        "M_SW_Leather",
+        "M_SW_Sole"
+      ],
+      "slot": "feet",
+      "hides_body": "Body_Feet",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 3
+    },
+    "Hands_Gloves": {
+      "tris": 312,
+      "verts": 164,
+      "materials": [
+        "M_SW_Leather"
+      ],
+      "slot": "hands",
+      "hides_body": "",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 2
+    },
+    "Acc_Belt": {
+      "tris": 236,
+      "verts": 120,
+      "materials": [
+        "M_SW_Leather",
+        "M_SW_Brass"
+      ],
+      "slot": "belt",
+      "hides_body": "",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 2
+    },
+    "Acc_Scarf": {
+      "tris": 260,
+      "verts": 132,
+      "materials": [
+        "M_SW_Lining"
+      ],
+      "slot": "neck",
+      "hides_body": "",
+      "visible_in_default_outfit": true,
+      "bad_weight_verts": 0,
+      "max_influences": 3
+    },
+    "Weapon_Longsword": {
+      "tris": 272,
+      "verts": 144,
+      "materials": [
+        "M_SW_Steel",
+        "M_SW_Brass",
+        "M_SW_Grip"
+      ],
+      "slot": "weapon",
+      "hides_body": "",
+      "visible_in_default_outfit": true
+    }
+  },
+  "budget": [
+    {
+      "group": "Тело",
+      "tris": 2984,
+      "target": "3–5k"
+    },
+    {
+      "group": "Голова",
+      "tris": 1668,
+      "target": "1.5–3k"
+    },
+    {
+      "group": "Волосы",
+      "tris": 1468,
+      "target": "1–2k"
+    },
+    {
+      "group": "Кафтан + рубашка",
+      "tris": 3656,
+      "target": "3–6k"
+    },
+    {
+      "group": "Штаны",
+      "tris": 846,
+      "target": "1–2k"
+    },
+    {
+      "group": "Сапоги + перчатки",
+      "tris": 1328,
+      "target": "1–2k"
+    },
+    {
+      "group": "Меч",
+      "tris": 272,
+      "target": "<1k"
+    },
+    {
+      "group": "Аксессуары (пояс, шарф)",
+      "tris": 496,
+      "target": "вне таблицы"
+    }
+  ],
+  "checks": {
+    "sword_follows_hand": true,
+    "bones": 31,
+    "deform_bones": 29,
+    "all_weights_normalized": true,
+    "max_influences_le_4": true,
+    "all_skinned_parts_on_one_rig": true,
+    "uv_maps": true
+  },
+  "tris_all_parts": 12718,
+  "tris_visible_default_outfit": 10458,
+  "files": [
+    "SK_Swordsman_v003.fbx",
+    "SM_Longsword_v003.fbx",
+    "build_report.json",
+    "preview_apose.png",
+    "preview_back.png",
+    "preview_front.png",
+    "preview_game_camera.png",
+    "preview_game_camera_close.png",
+    "preview_parts.png",
+    "preview_stride_test.png",
+    "swordsman_modular_v003.blend"
+  ]
+}

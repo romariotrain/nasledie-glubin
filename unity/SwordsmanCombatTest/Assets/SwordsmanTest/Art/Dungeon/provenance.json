@@ -1,0 +1,14 @@
+{
+  "version": "painted-dungeon-v001",
+  "reference": "style_reference.png (user-provided desired style)",
+  "floor": {
+    "file": "painted_flagstones_v001.png",
+    "provider": "built-in imagegen",
+    "original_output": "C:/Users/romam/.codex/generated_images/01a16561-8a54-7cc1-ad06-577301792e8b/exec-7c28f6b0-3c25-4018-b95d-92848ceb3be7.png",
+    "prompt": "Use case: stylized-concept. Asset type: seamless tileable square hand-painted ALBEDO texture for a real-time 3D dungeon floor. Reference image supplies ONLY painterly comic dark-fantasy art direction and stone shapes. Produce a NEW square texture tile viewed exactly orthographically from directly overhead, filling the entire image edge to edge. A 3 by 3 arrangement of large irregular roughly rectangular flagstones, dark cool blue-gray slate, thick dark recessed grout lines, chipped angular edges, occasional fine cracks and sparse tiny ochre wear flecks, broad restrained painted planar tonal variation, subtle fine dry-brush marks. Strong ink-like dark edges but no cartoon outlines around entire image. Large clean stone faces with relatively quiet centers so a small game character stays readable. Seamlessly tileable on all four edges; stones cut off at borders must continue on opposite border. NO perspective, NO scene, NO walls, NO torchlight, NO orange lighting pools, NO cast shadows, NO characters, NO text, NO labels, NO objects or debris piles. Uniform neutral illumination suitable as base color/albedo; all warm light will be added by actual Unity lights. Restrained value range: dark slate but not black, stone faces about RGB 70-100, crevices near RGB 20-30. Flat 2D game material artwork, sharp high-resolution brushwork, not photorealistic, not a floor scene screenshot."
+  },
+  "other_assets": "Locally authored procedural Unity meshes, materials and oak texture in DungeonArenaBuilder.cs. No downloaded asset packs.",
+  "character": "v010: v009 geometry, maps, rig and combat clips preserved; run stride length 1.43m, cadence about 180/min at default 4.3m/s. Free arm retained; coat follows larger leg motion. Standing no longer follows cursor; running follows movement; attacks/lunge aim at cursor; stationary dodge follows facing.",
+  "validation": "Engine build and 24 runtime checks in Validation/dungeon_v003; v001/v002 evidence preserved separately.",
+  "revision": "dungeon_v003"
+}

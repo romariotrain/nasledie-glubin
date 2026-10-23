@@ -1,0 +1,20 @@
+{
+  "size": 2048,
+  "front": "C:\\Users\\romam\\OneDrive\\\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b\\game\\nasledie-glubin\\art\\characters\\swordsman\\reference\\swordsman_simplified_v001.png",
+  "rear": "C:\\Users\\romam\\OneDrive\\\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b\\game\\nasledie-glubin\\art\\characters\\swordsman\\reference\\swordsman_back_texture_v001.png",
+  "front_bounds": [
+    128,
+    22,
+    881,
+    1498
+  ],
+  "rear_bounds": [
+    131,
+    17,
+    890,
+    1490
+  ],
+  "coverage": 0.44821691513061523,
+  "padding_pixels": 12,
+  "method": "Two-view colour projection, front/back normal blending, UV rasterization. Rear view is generated, not observed."
+}

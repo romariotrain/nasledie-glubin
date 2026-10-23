@@ -1,0 +1,41 @@
+{
+  "edited_grip_vertices": 84,
+  "grip_rebuild": {
+    "removed_hand_faces": 237,
+    "new_grip_vertices": 84,
+    "style": "Four curved finger pads and opposing thumb, rigidly weighted to Hand.R; wrist preserved; palette UVs in unused atlas corner."
+  },
+  "socket_palm_local": [
+    0,
+    0.068,
+    0.025
+  ],
+  "max_coat_rest_correction_metres": 0.0,
+  "collision_solver": [
+    {
+      "iteration": 0,
+      "contact_samples": 0,
+      "corrected_vertices": 0
+    }
+  ],
+  "final_collision_frames": {
+    "Idle": [],
+    "Walk_InPlace": [],
+    "Slash_01": [],
+    "Start_Walk": [],
+    "Stop_Walk": [],
+    "Game_Demo": []
+  },
+  "collision_method": "Coat vertices and triangle centroids vs leg BVH; horizontal parity; waist above z=.76 excluded; penetration threshold 1 mm.",
+  "keyframes_before": 83328,
+  "keyframes_after": 10801,
+  "clips": {
+    "Idle": 61,
+    "Walk_InPlace": 31,
+    "Slash_01": 37,
+    "Start_Walk": 10,
+    "Stop_Walk": 10,
+    "Game_Demo": 235
+  },
+  "limitations": "No guarantee for poses outside these clips; fused mitten grip, not articulated fingers; game view is Blender preview, not Unity profiling."
+}

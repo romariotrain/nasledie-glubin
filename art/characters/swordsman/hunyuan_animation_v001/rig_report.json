@@ -1,0 +1,122 @@
+{
+  "source": "C:\\Users\\romam\\OneDrive\\\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b\\game\\nasledie-glubin\\art\\characters\\swordsman\\hunyuan_lowpoly_v002\\swordsman_12k.glb",
+  "source_sha256": "af01cc99728733c1d37fec1a6a991eb0f194a23087cf51240ca5863d292d8b99",
+  "triangles": 11900,
+  "vertices": 5952,
+  "bones": 31,
+  "deform_bones": 29,
+  "joint_patches": [
+    {
+      "name": "Elbow.L",
+      "removed_faces": 221,
+      "boundary_counts": [
+        38,
+        30
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    },
+    {
+      "name": "Elbow.R",
+      "removed_faces": 188,
+      "boundary_counts": [
+        33,
+        24
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    },
+    {
+      "name": "Knee.L",
+      "removed_faces": 145,
+      "boundary_counts": [
+        31,
+        31
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    },
+    {
+      "name": "Knee.R",
+      "removed_faces": 171,
+      "boundary_counts": [
+        28,
+        28
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    },
+    {
+      "name": "Thigh.L",
+      "removed_faces": 134,
+      "boundary_counts": [
+        42,
+        39
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    },
+    {
+      "name": "Thigh.R",
+      "removed_faces": 163,
+      "boundary_counts": [
+        41,
+        33
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    },
+    {
+      "name": "Shoulder.L",
+      "removed_faces": 183,
+      "boundary_counts": [
+        35,
+        52
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    },
+    {
+      "name": "Shoulder.R",
+      "removed_faces": 123,
+      "boundary_counts": [
+        21,
+        44
+      ],
+      "interior_rings": 3,
+      "segments": 16
+    }
+  ],
+  "coat_weighted_vertices": 703,
+  "manifold": true,
+  "max_influences": 4,
+  "normalized_weights": true,
+  "deformation": [
+    {
+      "pose": "rest",
+      "edge_stretch_p99": 1.0000011599437413,
+      "edge_stretch_max": 1.000032370859831,
+      "edge_compression_min": 0.9999884613290614
+    },
+    {
+      "pose": "elbows_90",
+      "edge_stretch_p99": 1.1230602527442184,
+      "edge_stretch_max": 1.8537528096790117,
+      "edge_compression_min": 0.31236411037445494
+    },
+    {
+      "pose": "arms_raised",
+      "edge_stretch_p99": 1.3324663470556413,
+      "edge_stretch_max": 3.771273853883825,
+      "edge_compression_min": 0.40057958650603004
+    },
+    {
+      "pose": "step",
+      "edge_stretch_p99": 1.6142490225900143,
+      "edge_stretch_max": 12.998685975202774,
+      "edge_compression_min": 0.2423773261558074
+    }
+  ],
+  "scale_note": "Source approximately 2 units tall scaled to approximately 1.8 metres; A-pose rest.",
+  "limitations": "FK prototype, no IK, no facial/finger rig, no UVs/textures, no engine import or automated self-intersection guarantee."
+}

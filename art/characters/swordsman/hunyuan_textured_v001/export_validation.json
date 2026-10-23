@@ -1,0 +1,84 @@
+[
+  {
+    "file": "SK_Swordsman_Textured_v001.glb",
+    "character_triangles": 11898,
+    "sword_triangles": 88,
+    "bones": 31,
+    "uv_layers": 1,
+    "texture_images": 3,
+    "clips": [
+      {
+        "name": "Idle",
+        "range": [
+          0.8000000715255737,
+          48.79999923706055
+        ],
+        "max_sampled_vertex_motion": 0.01525487003439192,
+        "max_sampled_weapon_grip_motion": 0.008467650625610721,
+        "loop_position_error": 0.0
+      },
+      {
+        "name": "Walk_InPlace",
+        "range": [
+          0.8000000715255737,
+          24.799999237060547
+        ],
+        "max_sampled_vertex_motion": 0.3970727676994993,
+        "max_sampled_weapon_grip_motion": 0.3512684943762155,
+        "loop_position_error": 0.0
+      },
+      {
+        "name": "Slash_01",
+        "range": [
+          0.8000000715255737,
+          29.600000381469727
+        ],
+        "max_sampled_vertex_motion": 0.853470412656483,
+        "max_sampled_weapon_grip_motion": 0.7921225232407212,
+        "loop_position_error": null
+      }
+    ],
+    "sha256": "823a38c0346e9aaed3688278f254d6565eb2cdbe569eada2dbb2b4365d7bd3bb"
+  },
+  {
+    "file": "SK_Swordsman_Textured_v001.fbx",
+    "character_triangles": 11898,
+    "sword_triangles": 88,
+    "bones": 31,
+    "uv_layers": 1,
+    "texture_images": 3,
+    "clips": [
+      {
+        "name": "Idle",
+        "range": [
+          1.0,
+          61.0
+        ],
+        "max_sampled_vertex_motion": 0.015226898667951893,
+        "max_sampled_weapon_grip_motion": 0.00844504669924573,
+        "loop_position_error": 0.0
+      },
+      {
+        "name": "Walk_InPlace",
+        "range": [
+          1.0,
+          31.0
+        ],
+        "max_sampled_vertex_motion": 0.3971114631641023,
+        "max_sampled_weapon_grip_motion": 0.3512685898234816,
+        "loop_position_error": 0.0
+      },
+      {
+        "name": "Slash_01",
+        "range": [
+          1.0,
+          37.0
+        ],
+        "max_sampled_vertex_motion": 0.8535172006343728,
+        "max_sampled_weapon_grip_motion": 0.7921693041741359,
+        "loop_position_error": null
+      }
+    ],
+    "sha256": "2c3b89780e9fcd81d52bcfebf897b2b19be28b46e55f50c4c3ac78bdca6ccee3"
+  }
+]

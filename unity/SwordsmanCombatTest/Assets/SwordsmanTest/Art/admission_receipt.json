@@ -1,0 +1,20 @@
+{
+  "source_package": "art\\characters\\swordsman\\hunyuan_combat_v010",
+  "package_manifest_sha256": "642983e24b17e4a7db16ff0fbd91486887f4b049f316743324547cc6bbf855b3",
+  "purpose": "User-authorized local Unity combat prototype; no model weights or generator code admitted",
+  "copied": {
+    "SK_Swordsman_Combat_v010.fbx": "605ca1253e426922efbf900be31ff740986580cc3b77a343f2cb7e956ef5b77c",
+    "swordsman_basecolor_2048.png": "69a326efe01295258ab1dae4c73d6b604e5cf56816178edb9c2ab428fcc11912",
+    "swordsman_normal_2048.png": "49b6244e9734939f1b217770bbc1532112936a5aea91825c0eb865bba612a4e3",
+    "swordsman_roughness_2048.png": "6a375259a7460f8abd2179b2a590d0c70de438e740af881cb400d261020ebf0d",
+    "combat_events.json": "d86b57f073c06fbf5794b23c3996921c7676ae1ef4861f675b34c0d9f9b89a2d",
+    "spec.json": "434d883d4da7ed8f423b80ffdb16b1490e251f85e55a6b4e430ee0f9507bbc4f"
+  },
+  "derived": {
+    "body_metallic_smoothness.png": {
+      "sha256": "59507ed02f640f0ea53fe4c1d03efde98cac9cbafd7d8b70ee8c47e63c680742",
+      "source_sha256": "6a375259a7460f8abd2179b2a590d0c70de438e740af881cb400d261020ebf0d",
+      "operation": "RGB=0 (nonmetal body), A=255-roughness; imported as linear data"
+    }
+  }
+}

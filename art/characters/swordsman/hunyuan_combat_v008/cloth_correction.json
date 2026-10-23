@@ -1,0 +1,13 @@
+{
+  "method": "Rest-space inverse-skinning contact correction, shell coupling and one-ring displacement smoothing",
+  "iterations": [
+    {
+      "iteration": 0,
+      "contacts": 0,
+      "proposed_vertices": 0
+    }
+  ],
+  "max_rest_displacement_m": 0.0,
+  "changed_vertices": 0,
+  "limits": "Lower-coat/leg sample test only; not a runtime simulation or exhaustive intersection test"
+}

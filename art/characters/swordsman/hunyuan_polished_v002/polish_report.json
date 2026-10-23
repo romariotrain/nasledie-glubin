@@ -1,0 +1,241 @@
+{
+  "edited_grip_vertices": 77,
+  "socket_palm_local": [
+    0,
+    0.068,
+    0.025
+  ],
+  "max_coat_rest_correction_metres": 0.05500002457270252,
+  "collision_solver": [
+    {
+      "iteration": 0,
+      "contact_samples": 234,
+      "corrected_vertices": 51
+    },
+    {
+      "iteration": 1,
+      "contact_samples": 261,
+      "corrected_vertices": 43
+    },
+    {
+      "iteration": 2,
+      "contact_samples": 160,
+      "corrected_vertices": 30
+    },
+    {
+      "iteration": 3,
+      "contact_samples": 213,
+      "corrected_vertices": 28
+    },
+    {
+      "iteration": 4,
+      "contact_samples": 108,
+      "corrected_vertices": 28
+    },
+    {
+      "iteration": 5,
+      "contact_samples": 54,
+      "corrected_vertices": 16
+    },
+    {
+      "iteration": 6,
+      "contact_samples": 17,
+      "corrected_vertices": 12
+    },
+    {
+      "iteration": 7,
+      "contact_samples": 13,
+      "corrected_vertices": 12
+    },
+    {
+      "iteration": 8,
+      "contact_samples": 11,
+      "corrected_vertices": 7
+    },
+    {
+      "iteration": 9,
+      "contact_samples": 17,
+      "corrected_vertices": 9
+    }
+  ],
+  "final_collision_frames": {
+    "Idle": [],
+    "Walk_InPlace": [
+      {
+        "frame": 6,
+        "penetrating_samples": 5,
+        "deepest": 0.007745967013761401
+      },
+      {
+        "frame": 7,
+        "penetrating_samples": 6,
+        "deepest": 0.007321234792470932
+      },
+      {
+        "frame": 8,
+        "penetrating_samples": 1,
+        "deepest": 0.0039358497597277164
+      },
+      {
+        "frame": 18,
+        "penetrating_samples": 1,
+        "deepest": 0.009073666529729962
+      },
+      {
+        "frame": 25,
+        "penetrating_samples": 1,
+        "deepest": 0.004298722371459007
+      },
+      {
+        "frame": 26,
+        "penetrating_samples": 5,
+        "deepest": 0.007745967013761401
+      },
+      {
+        "frame": 27,
+        "penetrating_samples": 3,
+        "deepest": 0.008118923287838697
+      }
+    ],
+    "Slash_01": [
+      {
+        "frame": 3,
+        "penetrating_samples": 1,
+        "deepest": 0.0017692450492177159
+      }
+    ],
+    "Start_Walk": [
+      {
+        "frame": 3,
+        "penetrating_samples": 1,
+        "deepest": 0.0018534086993895471
+      },
+      {
+        "frame": 4,
+        "penetrating_samples": 1,
+        "deepest": 0.0018845101294573396
+      }
+    ],
+    "Stop_Walk": [
+      {
+        "frame": 7,
+        "penetrating_samples": 1,
+        "deepest": 0.0018845101294573396
+      },
+      {
+        "frame": 8,
+        "penetrating_samples": 1,
+        "deepest": 0.0018534086993895471
+      }
+    ],
+    "Game_Demo": [
+      {
+        "frame": 63,
+        "penetrating_samples": 1,
+        "deepest": 0.0018520989979151636
+      },
+      {
+        "frame": 64,
+        "penetrating_samples": 1,
+        "deepest": 0.0018809390385285951
+      },
+      {
+        "frame": 75,
+        "penetrating_samples": 5,
+        "deepest": 0.007745967013761401
+      },
+      {
+        "frame": 76,
+        "penetrating_samples": 6,
+        "deepest": 0.007321234792470932
+      },
+      {
+        "frame": 77,
+        "penetrating_samples": 1,
+        "deepest": 0.003935699118301272
+      },
+      {
+        "frame": 87,
+        "penetrating_samples": 1,
+        "deepest": 0.009073666529729962
+      },
+      {
+        "frame": 94,
+        "penetrating_samples": 1,
+        "deepest": 0.004298738436773419
+      },
+      {
+        "frame": 95,
+        "penetrating_samples": 5,
+        "deepest": 0.007746006129309535
+      },
+      {
+        "frame": 96,
+        "penetrating_samples": 3,
+        "deepest": 0.00811890047043562
+      },
+      {
+        "frame": 105,
+        "penetrating_samples": 5,
+        "deepest": 0.007745967013761401
+      },
+      {
+        "frame": 106,
+        "penetrating_samples": 6,
+        "deepest": 0.007321234792470932
+      },
+      {
+        "frame": 107,
+        "penetrating_samples": 1,
+        "deepest": 0.0039358497597277164
+      },
+      {
+        "frame": 117,
+        "penetrating_samples": 1,
+        "deepest": 0.009073666529729962
+      },
+      {
+        "frame": 124,
+        "penetrating_samples": 1,
+        "deepest": 0.004298722371459007
+      },
+      {
+        "frame": 125,
+        "penetrating_samples": 5,
+        "deepest": 0.007745967013761401
+      },
+      {
+        "frame": 126,
+        "penetrating_samples": 3,
+        "deepest": 0.008118923287838697
+      },
+      {
+        "frame": 136,
+        "penetrating_samples": 1,
+        "deepest": 0.0018860641866922379
+      },
+      {
+        "frame": 137,
+        "penetrating_samples": 1,
+        "deepest": 0.0018549320375313982
+      },
+      {
+        "frame": 141,
+        "penetrating_samples": 1,
+        "deepest": 0.0017692450492177159
+      }
+    ]
+  },
+  "collision_method": "Coat vertices and triangle centroids vs leg BVH; horizontal parity; waist above z=.76 excluded; penetration threshold 1 mm.",
+  "keyframes_before": 83328,
+  "keyframes_after": 10801,
+  "clips": {
+    "Idle": 61,
+    "Walk_InPlace": 31,
+    "Slash_01": 37,
+    "Start_Walk": 10,
+    "Stop_Walk": 10,
+    "Game_Demo": 235
+  },
+  "limitations": "No guarantee for poses outside these clips; fused mitten grip, not articulated fingers; game view is Blender preview, not Unity profiling."
+}

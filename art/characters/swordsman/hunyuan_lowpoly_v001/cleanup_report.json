@@ -1,0 +1,93 @@
+{
+  "source": "C:\\Users\\romam\\OneDrive\\\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b\\game\\nasledie-glubin\\work\\hunyuan2mini\\outputs\\swordsman-simplified-v001\\swordsman_untextured.glb",
+  "source_sha256": "89c2581ea3819e66a856ccc510412ea6dbddf5cbc8a015d318a0531a248a5163",
+  "source_triangles": 587588,
+  "original_components": 17,
+  "removed_components": 16,
+  "removed_triangles": 276,
+  "clean_triangles": 587312,
+  "method": "MeshLab feature-weighted quadric edge collapse",
+  "limitations": "Automatic triangle reduction; no animation edge-loop retopology, UVs, rig, texture, or engine import.",
+  "outputs": [
+    {
+      "file": "swordsman_10k.glb",
+      "triangles": 10000,
+      "vertices": 5002,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_components": 1,
+      "bounds": [
+        [
+          -0.5305365603979585,
+          -0.9995618082722926,
+          -0.3490602791631747
+        ],
+        [
+          0.4925251227030239,
+          0.9981663257094521,
+          0.3485872529782927
+        ]
+      ],
+      "silhouette_iou_256px": {
+        "0": 0.9855002081309837,
+        "45": 0.9844537210306608,
+        "90": 0.9843588149989642,
+        "135": 0.9859335038363172,
+        "180": 0.9855685839172968,
+        "225": 0.9845954506190613,
+        "270": 0.9843588149989642,
+        "315": 0.9860134271099744
+      },
+      "mean_silhouette_iou": 0.9850978155802779,
+      "min_silhouette_iou": 0.9843588149989642,
+      "approximate_symmetric_surface_sample_distance_fraction_height": {
+        "mean": 0.0025290990595095734,
+        "p95": 0.0047449252044138275,
+        "maximum": 0.008726508041047966
+      },
+      "distance_note": "Nearest points between two seeded 60k surface samples; includes sampling error, not exact Hausdorff distance.",
+      "seconds": 10.554262399673462,
+      "sha256": "5d241ca2b1059a06d2f74f39f7f150033a713dd283733f761f1d92b4371414de"
+    },
+    {
+      "file": "swordsman_12k.glb",
+      "triangles": 12000,
+      "vertices": 6002,
+      "watertight": true,
+      "consistent_winding": true,
+      "connected_components": 1,
+      "bounds": [
+        [
+          -0.5305365603979585,
+          -0.9995618082722926,
+          -0.3490602791631747
+        ],
+        [
+          0.4924091327937357,
+          0.9990435053147587,
+          0.3485872529782927
+        ]
+      ],
+      "silhouette_iou_256px": {
+        "0": 0.9863955021864371,
+        "45": 0.9854655346092963,
+        "90": 0.9865173200580792,
+        "135": 0.9883284035494444,
+        "180": 0.9863251423018187,
+        "225": 0.9854644887385766,
+        "270": 0.9865173200580792,
+        "315": 0.9884083459908866
+      },
+      "mean_silhouette_iou": 0.9866777571865772,
+      "min_silhouette_iou": 0.9854644887385766,
+      "approximate_symmetric_surface_sample_distance_fraction_height": {
+        "mean": 0.002496148412681872,
+        "p95": 0.004720434446233344,
+        "maximum": 0.008766996737213656
+      },
+      "distance_note": "Nearest points between two seeded 60k surface samples; includes sampling error, not exact Hausdorff distance.",
+      "seconds": 11.291003942489624,
+      "sha256": "4e54cf313cd822925d42cdf89591fbc5e932c14278fad1120c1d834d48ff1985"
+    }
+  ]
+}

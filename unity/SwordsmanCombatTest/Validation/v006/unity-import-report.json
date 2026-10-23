@@ -1,0 +1,39 @@
+{
+    "unity": "6000.6.6f1",
+    "sourceFbxSha256": "812c52a96b5ea241911cd46eeaf356df8ef0e51d2f4e89b222f626a0dcd13372",
+    "scene": "Assets/SwordsmanTest/Scenes/CombatTest.unity",
+    "buildResult": "",
+    "triangles": 11980,
+    "bones": 31,
+    "clips": 9,
+    "modelHeight": 1.7745070457458496,
+    "animationBoundsHeight": 2.299480676651001,
+    "avatarValid": true,
+    "animationNames": [
+        "attack_1",
+        "attack_2",
+        "attack_3",
+        "death",
+        "dodge",
+        "hurt",
+        "idle",
+        "piercing_lunge",
+        "run"
+    ],
+    "animationLengths": [
+        0.40000003576278687,
+        0.40000003576278687,
+        0.6666666865348816,
+        1.2000000476837158,
+        0.3333333432674408,
+        0.23333334922790527,
+        2.0,
+        0.5333333611488342,
+        0.6000000238418579
+    ],
+    "detectedForwardBeforeCorrection": {
+        "x": -0.015868134796619415,
+        "y": 0.0,
+        "z": -0.9998740553855896
+    }
+}

@@ -1,0 +1,85 @@
+{
+  "stage": "v001 modular silhouette study",
+  "blender": "5.2.2 LTS",
+  "shared_rig": "Rig_Swordsman",
+  "bone_count": 22,
+  "modules": {
+    "body": {
+      "object": "Body_Exposed",
+      "vertices": 979,
+      "triangles": 1884,
+      "armature_modifiers": 1,
+      "vertex_groups": 4
+    },
+    "covered": {
+      "object": "Body_Covered",
+      "vertices": 424,
+      "triangles": 820,
+      "armature_modifiers": 1,
+      "vertex_groups": 14
+    },
+    "hair": {
+      "object": "Hair_Starter",
+      "vertices": 147,
+      "triangles": 246,
+      "armature_modifiers": 1,
+      "vertex_groups": 1
+    },
+    "coat": {
+      "object": "Top_Longcoat",
+      "vertices": 888,
+      "triangles": 1668,
+      "armature_modifiers": 1,
+      "vertex_groups": 8
+    },
+    "jacket": {
+      "object": "Top_ShortJacket",
+      "vertices": 748,
+      "triangles": 1404,
+      "armature_modifiers": 1,
+      "vertex_groups": 6
+    },
+    "pants": {
+      "object": "Legs_Trousers",
+      "vertices": 264,
+      "triangles": 508,
+      "armature_modifiers": 1,
+      "vertex_groups": 5
+    },
+    "gloves": {
+      "object": "Hands_Gloves",
+      "vertices": 692,
+      "triangles": 1320,
+      "armature_modifiers": 1,
+      "vertex_groups": 4
+    },
+    "boots": {
+      "object": "Feet_Boots",
+      "vertices": 740,
+      "triangles": 1408,
+      "armature_modifiers": 1,
+      "vertex_groups": 4
+    },
+    "sword": {
+      "object": "Weapon_Longsword",
+      "vertices": 258,
+      "triangles": 460,
+      "armature_modifiers": 0,
+      "vertex_groups": 0
+    },
+    "sword_alt": {
+      "object": "Weapon_RelicSword",
+      "vertices": 310,
+      "triangles": 556,
+      "armature_modifiers": 0,
+      "vertex_groups": 1
+    }
+  },
+  "limitations": [
+    "No Unity import/export verification",
+    "No final combat animations",
+    "Provisional deformation weights and disconnected mesh patches",
+    "Flat materials, no painted UV textures",
+    "No claim of final game readiness"
+  ]
+}

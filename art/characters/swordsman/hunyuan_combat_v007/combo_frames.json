@@ -1,0 +1,377 @@
+[
+  {
+    "clip": "idle",
+    "frame": 1,
+    "file": "combo_frames\\000.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 2,
+    "file": "combo_frames\\001.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 3,
+    "file": "combo_frames\\002.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 4,
+    "file": "combo_frames\\003.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 5,
+    "file": "combo_frames\\004.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 6,
+    "file": "combo_frames\\005.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 7,
+    "file": "combo_frames\\006.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 8,
+    "file": "combo_frames\\007.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 9,
+    "file": "combo_frames\\008.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 10,
+    "file": "combo_frames\\009.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 11,
+    "file": "combo_frames\\010.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 12,
+    "file": "combo_frames\\011.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 1,
+    "file": "combo_frames\\012.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 2,
+    "file": "combo_frames\\013.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 3,
+    "file": "combo_frames\\014.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 4,
+    "file": "combo_frames\\015.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 5,
+    "file": "combo_frames\\016.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 6,
+    "file": "combo_frames\\017.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 7,
+    "file": "combo_frames\\018.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 8,
+    "file": "combo_frames\\019.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 9,
+    "file": "combo_frames\\020.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 10,
+    "file": "combo_frames\\021.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 11,
+    "file": "combo_frames\\022.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 12,
+    "file": "combo_frames\\023.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 13,
+    "file": "combo_frames\\024.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 2,
+    "file": "combo_frames\\025.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 3,
+    "file": "combo_frames\\026.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 4,
+    "file": "combo_frames\\027.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 5,
+    "file": "combo_frames\\028.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 6,
+    "file": "combo_frames\\029.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 7,
+    "file": "combo_frames\\030.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 8,
+    "file": "combo_frames\\031.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 9,
+    "file": "combo_frames\\032.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 10,
+    "file": "combo_frames\\033.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 11,
+    "file": "combo_frames\\034.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 12,
+    "file": "combo_frames\\035.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 13,
+    "file": "combo_frames\\036.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 2,
+    "file": "combo_frames\\037.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 3,
+    "file": "combo_frames\\038.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 4,
+    "file": "combo_frames\\039.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 5,
+    "file": "combo_frames\\040.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 6,
+    "file": "combo_frames\\041.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 7,
+    "file": "combo_frames\\042.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 8,
+    "file": "combo_frames\\043.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 9,
+    "file": "combo_frames\\044.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 10,
+    "file": "combo_frames\\045.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 11,
+    "file": "combo_frames\\046.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 12,
+    "file": "combo_frames\\047.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 13,
+    "file": "combo_frames\\048.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 14,
+    "file": "combo_frames\\049.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 15,
+    "file": "combo_frames\\050.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 16,
+    "file": "combo_frames\\051.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 17,
+    "file": "combo_frames\\052.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 18,
+    "file": "combo_frames\\053.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 19,
+    "file": "combo_frames\\054.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 20,
+    "file": "combo_frames\\055.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 21,
+    "file": "combo_frames\\056.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 1,
+    "file": "combo_frames\\057.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 2,
+    "file": "combo_frames\\058.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 3,
+    "file": "combo_frames\\059.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 4,
+    "file": "combo_frames\\060.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 5,
+    "file": "combo_frames\\061.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 6,
+    "file": "combo_frames\\062.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 7,
+    "file": "combo_frames\\063.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 8,
+    "file": "combo_frames\\064.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 9,
+    "file": "combo_frames\\065.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 10,
+    "file": "combo_frames\\066.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 11,
+    "file": "combo_frames\\067.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 12,
+    "file": "combo_frames\\068.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 13,
+    "file": "combo_frames\\069.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 14,
+    "file": "combo_frames\\070.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 15,
+    "file": "combo_frames\\071.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 16,
+    "file": "combo_frames\\072.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 17,
+    "file": "combo_frames\\073.png"
+  },
+  {
+    "clip": "idle",
+    "frame": 18,
+    "file": "combo_frames\\074.png"
+  }
+]

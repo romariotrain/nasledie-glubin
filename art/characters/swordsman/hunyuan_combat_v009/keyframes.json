@@ -1,0 +1,117 @@
+[
+  {
+    "clip": "idle",
+    "frame": 1,
+    "file": "keyframes\\idle\\001.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 4,
+    "file": "keyframes\\attack_1\\004.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 7,
+    "file": "keyframes\\attack_1\\007.png"
+  },
+  {
+    "clip": "attack_1",
+    "frame": 13,
+    "file": "keyframes\\attack_1\\013.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 1,
+    "file": "keyframes\\attack_2\\001.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 6,
+    "file": "keyframes\\attack_2\\006.png"
+  },
+  {
+    "clip": "attack_2",
+    "frame": 13,
+    "file": "keyframes\\attack_2\\013.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 7,
+    "file": "keyframes\\attack_3\\007.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 11,
+    "file": "keyframes\\attack_3\\011.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 13,
+    "file": "keyframes\\attack_3\\013.png"
+  },
+  {
+    "clip": "attack_3",
+    "frame": 21,
+    "file": "keyframes\\attack_3\\021.png"
+  },
+  {
+    "clip": "dodge",
+    "frame": 3,
+    "file": "keyframes\\dodge\\003.png"
+  },
+  {
+    "clip": "dodge",
+    "frame": 7,
+    "file": "keyframes\\dodge\\007.png"
+  },
+  {
+    "clip": "piercing_lunge",
+    "frame": 5,
+    "file": "keyframes\\piercing_lunge\\005.png"
+  },
+  {
+    "clip": "piercing_lunge",
+    "frame": 8,
+    "file": "keyframes\\piercing_lunge\\008.png"
+  },
+  {
+    "clip": "piercing_lunge",
+    "frame": 11,
+    "file": "keyframes\\piercing_lunge\\011.png"
+  },
+  {
+    "clip": "hurt",
+    "frame": 3,
+    "file": "keyframes\\hurt\\003.png"
+  },
+  {
+    "clip": "death",
+    "frame": 13,
+    "file": "keyframes\\death\\013.png"
+  },
+  {
+    "clip": "death",
+    "frame": 25,
+    "file": "keyframes\\death\\025.png"
+  },
+  {
+    "clip": "death",
+    "frame": 37,
+    "file": "keyframes\\death\\037.png"
+  },
+  {
+    "clip": "run",
+    "frame": 4,
+    "file": "keyframes\\run\\004.png"
+  },
+  {
+    "clip": "run",
+    "frame": 9,
+    "file": "keyframes\\run\\009.png"
+  },
+  {
+    "clip": "run",
+    "frame": 14,
+    "file": "keyframes\\run\\014.png"
+  }
+]
