@@ -64,6 +64,8 @@ Shader "Swordsman/GraphicCharacter"
             sampler2D _MainTex,_BumpMap;
             float4 _MainTex_ST,_Color;
             float _BumpScale,_HeroKeyStrength,_ShadowLevel,_MidLevel,_LitLevel,_BandWidth,_RedBoost;
+            // Globals set by the StylePost test (0 = original look): rim strength and two-tone banding.
+            float _StyleRim,_StyleBands;
             struct appdata {float4 vertex:POSITION;float3 normal:NORMAL;float4 tangent:TANGENT;float2 uv:TEXCOORD0;};
             struct v2f {float4 pos:SV_POSITION;float2 uv:TEXCOORD0;float3 n:TEXCOORD1;float3 t:TEXCOORD2;float3 b:TEXCOORD3;SHADOW_COORDS(4)};
             v2f vert(appdata v)
@@ -80,13 +82,20 @@ Shader "Swordsman/GraphicCharacter"
                 float light=saturate(dot(n,normalize(_WorldSpaceLightPos0.xyz)));
                 float width=max(_BandWidth,fwidth(light));
                 float bands=_ShadowLevel+(_MidLevel-_ShadowLevel)*smoothstep(.31-width,.31+width,light)+(_LitLevel-_MidLevel)*smoothstep(.71-width,.71+width,light);
+                float twoTone=lerp(_ShadowLevel*.92,_LitLevel,smoothstep(.42-width,.42+width,light));
+                bands=lerp(bands,twoTone,_StyleBands);
                 float shadow=SHADOW_ATTENUATION(i);
                 if(_BandWidth<.025)shadow=step(.5,shadow);
                 float shade=bands*lerp(.76,1,shadow)*_HeroKeyStrength;
                 fixed4 colour=tex2D(_MainTex,i.uv)*_Color;
                 float crimson=smoothstep(.004,.04,colour.r-max(colour.g,colour.b))*smoothstep(.70,.95,colour.b/(colour.g+.001));
                 colour.rgb*=lerp(1,_RedBoost,crimson);
-                colour.rgb*=shade*(.88+.12*_LightColor0.rgb);return fixed4(colour.rgb,1);
+                colour.rgb*=shade*(.88+.12*_LightColor0.rgb);
+                // Cool rim on edges turned away from the camera separates dark cloth from the dark floor.
+                float facingView=saturate(dot(n,normalize(UNITY_MATRIX_V[2].xyz)));
+                float rim=smoothstep(.62,.8,1-facingView)*_StyleRim;
+                colour.rgb+=float3(.42,.5,.68)*rim;
+                return fixed4(colour.rgb,1);
             }
             ENDCG
         }
