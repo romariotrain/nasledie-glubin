@@ -135,7 +135,8 @@ namespace SwordsmanTest.Editor
             var baseObject=new GameObject("Blade ribbon base");baseObject.transform.SetParent(sword,false);
             Vector3 hilt=bounds.center;hilt[axis]=Mathf.Lerp(bounds.min[axis],bounds.max[axis],.16f);baseObject.transform.localPosition=hilt;
             var ribbon=hero.AddComponent<SwordRibbon>();ribbon.bladeBase=baseObject.transform;ribbon.bladeTip=trailObject.transform;
-            ribbon.material=UnlitMaterial("Broad sword sweep",Color.white);player.swordRibbon=ribbon;
+            ribbon.material=UnlitMaterial("Broad sword sweep",Color.white);ribbon.material.shader=Shader.Find("Swordsman/SlashArc");
+            player.swordRibbon=ribbon;
             var ghosts=hero.AddComponent<DashGhosts>();ghosts.skin=model.GetComponentInChildren<SkinnedMeshRenderer>();
             ghosts.material=UnlitMaterial("Dash ghosts",Color.white);player.dashGhosts=ghosts;
             var line=new GameObject("Hit area").AddComponent<LineRenderer>(); line.useWorldSpace=true;
