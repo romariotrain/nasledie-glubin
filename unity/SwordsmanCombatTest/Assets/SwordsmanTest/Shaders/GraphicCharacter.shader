@@ -28,6 +28,9 @@ Shader "Swordsman/GraphicCharacter"
             Tags {"LightMode"="Always"}
             Cull Front
             ZWrite On
+            // Folded coat faces point away from the camera; push the dark hull behind the lit surface
+            // so it only shows at the silhouette instead of as black patches.
+            Offset 4, 4
             CGPROGRAM
             #pragma vertex outlineVert
             #pragma fragment outlineFrag
@@ -49,6 +52,8 @@ Shader "Swordsman/GraphicCharacter"
         Pass
         {
             Tags {"LightMode"="ForwardBase"}
+            // The coat shell folds through itself on wide run strides; draw both sides so no hole opens.
+            Cull Off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
@@ -68,10 +73,10 @@ Shader "Swordsman/GraphicCharacter"
                 o.b=cross(o.n,o.t)*v.tangent.w*unity_WorldTransformParams.w;
                 TRANSFER_SHADOW(o);return o;
             }
-            fixed4 frag(v2f i):SV_Target
+            fixed4 frag(v2f i,float facing:VFACE):SV_Target
             {
                 float3 detail=UnpackNormal(tex2D(_BumpMap,i.uv));detail.xy*=_BumpScale;
-                float3 n=normalize(i.n*detail.z+i.t*detail.x+i.b*detail.y);
+                float3 n=normalize(i.n*detail.z+i.t*detail.x+i.b*detail.y)*(facing>0?1:-1);
                 float light=saturate(dot(n,normalize(_WorldSpaceLightPos0.xyz)));
                 float width=max(_BandWidth,fwidth(light));
                 float bands=_ShadowLevel+(_MidLevel-_ShadowLevel)*smoothstep(.31-width,.31+width,light)+(_LitLevel-_MidLevel)*smoothstep(.71-width,.71+width,light);
