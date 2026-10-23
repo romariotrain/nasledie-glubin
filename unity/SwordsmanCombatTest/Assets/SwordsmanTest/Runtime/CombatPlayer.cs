@@ -46,8 +46,6 @@ namespace SwordsmanTest
         Vector3 velocity, actionDirection, spawn;
         float locomotionTime, idleTime, freeze, attackBuffer;
         bool comboQueued, initialized;
-        AudioSource audioSource;
-        AudioClip lightHit, heavyHit;
 
         public void Initialize()
         {
@@ -59,8 +57,6 @@ namespace SwordsmanTest
             if (targets == null || targets.Length == 0) targets = FindObjectsByType<TrainingDummy>();
             animationPlayer.Initialize();
             foreach (var dummy in targets) dummy.Initialize();
-            audioSource = gameObject.AddComponent<AudioSource>(); audioSource.spatialBlend = 0;
-            lightHit = Thud(135, .075f); heavyHit = Thud(65, .13f);
             animationPlayer.Sample("idle", 0, 1);
         }
         void Start() { Initialize(); }
@@ -231,7 +227,6 @@ namespace SwordsmanTest
                 hitTargets.Add(dummy); dummy.Hit(move.damage, direction, move.knockback); TotalHits++;
                 freeze = Mathf.Max(freeze, move.hitstop);
                 if (cameraRig) cameraRig.Shake(State == "attack_3" ? .10f : State == "piercing_lunge" ? .065f : .022f);
-                if (audioSource) audioSource.PlayOneShot(State == "attack_3" ? heavyHit : lightHit, .4f);
             }
         }
 
@@ -253,17 +248,6 @@ namespace SwordsmanTest
                 hitboxOutline.SetPosition(i + 1, origin + direction * reach);
             }
             hitboxOutline.SetPosition(n + 2, origin);
-        }
-
-        AudioClip Thud(float frequency, float duration)
-        {
-            int count = (int)(22050 * duration); var data = new float[count];
-            for (int i = 0; i < count; i++)
-            {
-                float t = i / 22050f; float envelope = Mathf.Exp(-t / duration * 7);
-                data[i] = Mathf.Sin(2 * Mathf.PI * frequency * t * (1 - .3f * t / duration)) * envelope * .35f;
-            }
-            var clip = AudioClip.Create("Procedural training impact", count, 1, 22050, false); clip.SetData(data, 0); return clip;
         }
     }
 }
