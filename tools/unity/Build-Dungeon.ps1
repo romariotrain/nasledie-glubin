@@ -18,6 +18,20 @@ Copy-Item -Path (Join-Path $taskPreview "$taskAssets/Art/Dungeon/*") -Destinatio
 foreach($taskFile in @('Scenes/DungeonCombatTest.unity','Scenes/DungeonCombatTest.unity.meta','Runtime/TorchFlicker.cs.meta','Prefabs/SwordsmanPlayer_v010.prefab','Prefabs/SwordsmanPlayer_v010.prefab.meta','Data/CombatTuning_v010.asset','Data/CombatTuning_v010.asset.meta')){
     Copy-Item -LiteralPath (Join-Path $taskPreview "$taskAssets/$taskFile") -Destination (Join-Path $taskOriginal "$taskAssets/$taskFile") -Force
 }
+# The builder sets FBX/texture import settings in Art/*.meta and the copied prefab references
+# their GUIDs, so bring those .meta back too. A GUID change would break the open project's links.
+function Get-TaskGuid($taskPath){ (Select-String -LiteralPath $taskPath -Pattern '^guid: ([0-9a-f]{32})' -List).Matches[0].Groups[1].Value }
+foreach($taskMeta in Get-ChildItem -LiteralPath (Join-Path $taskPreview "$taskAssets/Art") -Filter '*.meta' -File){
+    $taskAsset=Join-Path $taskOriginal "$taskAssets/Art/$($taskMeta.BaseName)"
+    $taskTarget="$taskAsset.meta"
+    if(-not (Test-Path -LiteralPath $taskAsset)){continue}
+    if(Test-Path -LiteralPath $taskTarget){
+        if((Get-FileHash -LiteralPath $taskTarget).Hash -eq (Get-FileHash -LiteralPath $taskMeta.FullName).Hash){continue}
+        if((Get-TaskGuid $taskTarget) -ne (Get-TaskGuid $taskMeta.FullName)){throw "GUID differs for $($taskMeta.Name); resolve manually before admitting the build"}
+    }
+    Copy-Item -LiteralPath $taskMeta.FullName -Destination $taskTarget -Force
+    Write-Output "Synced import settings: $taskAssets/Art/$($taskMeta.Name)"
+}
 if($Test){
     $taskOutput=Join-Path $taskOriginal ('Validation/dungeon_'+$Revision)
     New-Item -ItemType Directory -Force $taskOutput | Out-Null
